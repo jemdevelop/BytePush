@@ -21,11 +21,9 @@ public struct BytePushUser: Codable {
     let link: URL
     /// Avatar URLs for the user.
     let avatarURLs: [String:URL]
-    /// Meta fields.
-    let meta: [String]
     
     enum CodingKeys: String, CodingKey {
-        case id, name, url, description, link, meta
+        case id, name, url, description, link
         case avatarURLs = "avatar_urls"
     }
 }

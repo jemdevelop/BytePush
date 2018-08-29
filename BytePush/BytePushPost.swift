@@ -71,8 +71,6 @@ public struct BytePushPost: Codable {
     let pingStatus: AllowedStatus
     /// The format for the object.
     let format: Format
-    /// Meta fields.
-    let meta: [String] // YES?
     /// Whether or not the object should be treated as sticky.
     let sticky: Bool
     /// The theme file to use to display the object.
@@ -84,7 +82,7 @@ public struct BytePushPost: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id, link, slug, status, type, title, content, author, excerpt
-        case format, meta, sticky, template, categories, tags
+        case format, sticky, template, categories, tags
         case date = "date_gmt"
         case guid = "guid"
         case modified = "modified_gmt"
