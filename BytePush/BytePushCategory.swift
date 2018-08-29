@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BytePushCategory: Codable {
+public struct BytePushCategory: Codable {
     enum Taxonomy: String, Codable {
         case category, post_tag, nav_menu, link_category, post_format
     }
