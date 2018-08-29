@@ -47,7 +47,7 @@ public struct BytePushPost: Codable {
     let id: Int
     /// URL to the object.
     let link: URL
-    /// The date the object was last modified, in the site's timezone.
+    /// The date the object was published, as GMT.
     let modified: Date
     /// An alphanumeric identifier for the object unique to its type.
     let slug: String

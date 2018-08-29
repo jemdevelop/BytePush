@@ -23,7 +23,7 @@ public struct BytePushComment: Codable {
     let authorURL: URL?
     /// The content for the object.
     let content: Content
-    /// The date the object was published, in the site's timezone.
+    /// The date the object was published, as GMT.
     let date: Date
     /// URL to the object.
     let link: URL
