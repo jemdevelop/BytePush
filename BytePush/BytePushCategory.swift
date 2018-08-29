@@ -9,10 +9,6 @@
 import Foundation
 
 public struct BytePushCategory: Codable {
-    enum Taxonomy: String, Codable {
-        case category, post_tag, nav_menu, link_category, post_format
-    }
-    
     /// Unique identifier for the term.
     let id: Int
     /// Number of published posts for the term.

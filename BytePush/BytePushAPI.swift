@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum Taxonomy: String, Codable {
+    case category, post_tag, nav_menu, link_category, post_format
+}
+
 public class BytePushAPI {
     let host: URL
     
