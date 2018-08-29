@@ -8,6 +8,6 @@
 
 import Foundation
 
-public struct BytePushPage: Codeable {
+public struct BytePushPage: Codable {
     
 }
