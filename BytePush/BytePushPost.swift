@@ -9,17 +9,6 @@
 import Foundation
 
 public struct BytePushPost: Codable {
-    enum Status: String, Codable {
-        case publish = "publish"
-        case future = "future"
-        case draft = "draft"
-        case pending = "pending"
-        case priv = "private"
-    }
-    enum AllowedStatus: String, Codable {
-        case open
-        case closed
-    }
     enum Format: String, Codable {
         case standard
         case aside
@@ -31,10 +20,6 @@ public struct BytePushPost: Codable {
         case status
         case video
         case audio
-    }
-    struct PostText: Codable {
-        let rendered: String
-        let protected: Bool
     }
     
     /// The date the object was published, as GMT.

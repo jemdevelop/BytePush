@@ -17,6 +17,8 @@
 		0552FDE921365CF200A61CC5 /* BytePushTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDE821365CF200A61CC5 /* BytePushTag.swift */; };
 		0552FDEB21365E2C00A61CC5 /* BytePushPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDEA21365E2C00A61CC5 /* BytePushPage.swift */; };
 		0552FDEF2136610D00A61CC5 /* BytePushComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDEE2136610D00A61CC5 /* BytePushComment.swift */; };
+		0552FDF12136644100A61CC5 /* BytePushMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDF02136644100A61CC5 /* BytePushMedia.swift */; };
+		0552FDF3213666FA00A61CC5 /* BytePushCommonTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDF2213666FA00A61CC5 /* BytePushCommonTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		0552FDE821365CF200A61CC5 /* BytePushTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushTag.swift; sourceTree = "<group>"; };
 		0552FDEA21365E2C00A61CC5 /* BytePushPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPage.swift; sourceTree = "<group>"; };
 		0552FDEE2136610D00A61CC5 /* BytePushComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushComment.swift; sourceTree = "<group>"; };
+		0552FDF02136644100A61CC5 /* BytePushMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushMedia.swift; sourceTree = "<group>"; };
+		0552FDF2213666FA00A61CC5 /* BytePushCommonTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushCommonTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +91,14 @@
 			children = (
 				05005A3C2136188D00B1BB1B /* BytePush.h */,
 				05005A532136191A00B1BB1B /* BytePushAPI.swift */,
+				0552FDF2213666FA00A61CC5 /* BytePushCommonTypes.swift */,
 				05005A57213625C500B1BB1B /* BytePushUser.swift */,
 				0552FDE62136562100A61CC5 /* BytePushCategory.swift */,
 				0552FDE821365CF200A61CC5 /* BytePushTag.swift */,
 				0552FDEA21365E2C00A61CC5 /* BytePushPage.swift */,
 				05005A5521361A8B00B1BB1B /* BytePushPost.swift */,
 				0552FDEE2136610D00A61CC5 /* BytePushComment.swift */,
+				0552FDF02136644100A61CC5 /* BytePushMedia.swift */,
 				05005A3D2136188D00B1BB1B /* Info.plist */,
 			);
 			path = BytePush;
@@ -218,7 +224,9 @@
 			files = (
 				05005A542136191A00B1BB1B /* BytePushAPI.swift in Sources */,
 				05005A5621361A8B00B1BB1B /* BytePushPost.swift in Sources */,
+				0552FDF12136644100A61CC5 /* BytePushMedia.swift in Sources */,
 				0552FDE921365CF200A61CC5 /* BytePushTag.swift in Sources */,
+				0552FDF3213666FA00A61CC5 /* BytePushCommonTypes.swift in Sources */,
 				05005A58213625C500B1BB1B /* BytePushUser.swift in Sources */,
 				0552FDEB21365E2C00A61CC5 /* BytePushPage.swift in Sources */,
 				0552FDEF2136610D00A61CC5 /* BytePushComment.swift in Sources */,

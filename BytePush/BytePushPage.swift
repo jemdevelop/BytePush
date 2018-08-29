@@ -9,22 +9,6 @@
 import Foundation
 
 public struct BytePushPage: Codable {
-    enum Status: String, Codable {
-        case publish = "publish"
-        case future = "future"
-        case draft = "draft"
-        case pending = "pending"
-        case priv = "private"
-    }
-    enum AllowedStatus: String, Codable {
-        case open
-        case closed
-    }
-    struct PostText: Codable {
-        let rendered: String
-        let protected: Bool
-    }
-    
     /// The date the object was published, as GMT.
     let date: Date
     /// The globally unique identifier for the object.
