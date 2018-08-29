@@ -14,6 +14,7 @@
 		05005A5621361A8B00B1BB1B /* BytePushPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05005A5521361A8B00B1BB1B /* BytePushPost.swift */; };
 		05005A58213625C500B1BB1B /* BytePushUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05005A57213625C500B1BB1B /* BytePushUser.swift */; };
 		0552FDE72136562100A61CC5 /* BytePushCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDE62136562100A61CC5 /* BytePushCategory.swift */; };
+		0552FDE921365CF200A61CC5 /* BytePushTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDE821365CF200A61CC5 /* BytePushTag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		05005A5521361A8B00B1BB1B /* BytePushPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPost.swift; sourceTree = "<group>"; };
 		05005A57213625C500B1BB1B /* BytePushUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushUser.swift; sourceTree = "<group>"; };
 		0552FDE62136562100A61CC5 /* BytePushCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushCategory.swift; sourceTree = "<group>"; };
+		0552FDE821365CF200A61CC5 /* BytePushTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushTag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				05005A532136191A00B1BB1B /* BytePushAPI.swift */,
 				05005A57213625C500B1BB1B /* BytePushUser.swift */,
 				0552FDE62136562100A61CC5 /* BytePushCategory.swift */,
+				0552FDE821365CF200A61CC5 /* BytePushTag.swift */,
 				05005A5521361A8B00B1BB1B /* BytePushPost.swift */,
 				05005A3D2136188D00B1BB1B /* Info.plist */,
 			);
@@ -209,6 +212,7 @@
 			files = (
 				05005A542136191A00B1BB1B /* BytePushAPI.swift in Sources */,
 				05005A5621361A8B00B1BB1B /* BytePushPost.swift in Sources */,
+				0552FDE921365CF200A61CC5 /* BytePushTag.swift in Sources */,
 				05005A58213625C500B1BB1B /* BytePushUser.swift in Sources */,
 				0552FDE72136562100A61CC5 /* BytePushCategory.swift in Sources */,
 			);
