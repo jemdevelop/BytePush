@@ -37,4 +37,11 @@ public struct BytePushComment: Codable {
     let type: String
     /// Avatar URLs for the object author.
     let authorAvatarURLs: [String:URL]
+    
+    enum CodingKeys: String, CodingKey {
+        case id, author, conent, date, link, parent, post, status, type
+        case authorName = "author_name"
+        case authorURL = "author_URL"
+        case authorAvatarURLs = "author_avatar_urls"
+    }
 }
