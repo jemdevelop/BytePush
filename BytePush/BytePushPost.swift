@@ -8,23 +8,19 @@
 
 import Foundation
 
-public struct BytePushPost {
-    enum Status: String {
+public struct BytePushPost: Codable {
+    enum Status: String, Codable {
         case publish = "publish"
         case future = "future"
         case draft = "draft"
         case pending = "pending"
         case priv = "private"
     }
-    enum CommentStatus: String {
+    enum AllowedStatus: String, Codable {
         case open
         case closed
     }
-    enum PingStatus: String {
-        case open
-        case closed
-    }
-    enum Format: String {
+    enum Format: String, Codable {
         case standard
         case aside
         case chat
@@ -36,10 +32,17 @@ public struct BytePushPost {
         case video
         case audio
     }
+    struct PostText: Codable {
+        let rendered: String
+        let protected: Bool
+    }
+    struct Rendered: Codable {
+        let rendered: String
+    }
     /// The date the object was published, in the site's timezone.
-    var date: Date
+    let date: Date
     /// The globally unique identifier for the object.
-    let guid: String
+    let guid: Rendered
     /// Unique identifier for the object.
     let id: Int
     /// URL to the object.
@@ -47,96 +50,44 @@ public struct BytePushPost {
     /// The date the object was last modified, in the site's timezone.
     let modified: Date
     /// A named status for the object.
-    var status: Status
+    let status: Status
     /// Type of Post for the object.
     let type: String
     /// The title for the object.
-    var title: String
+    let title: Rendered
     /// The content for the object.
-    var content: (rendered: String, protected: Bool)
+    let content: PostText
     /// The ID for the author of the object.
-    var author: Int
+    let author: Int
     /// The excerpt for the object.
-    var excerpt: (rendered: String, protected: Bool)
+    let excerpt: PostText
     /// The ID of the featured media for the object.
-    var featuredMedia: Int
+    let featuredMedia: Int
     /// Whether or not comments are open on the object.
-    var commentStatus: CommentStatus
+    let commentStatus: AllowedStatus
     /// Whether or not the object can be pinged.
-    var pingStatus: PingStatus
+    let pingStatus: AllowedStatus
     /// The format for the object.
-    var format: Format
+    let format: Format
     /// Meta fields.
-    var meta: [String] // YES?
+    let meta: [String] // YES?
     /// Whether or not the object should be treated as sticky.
-    var sticky: Bool
+    let sticky: Bool
     /// The theme file to use to display the object.
-    var template: String
+    let template: String
     /// The terms assigned to the object in the category taxonomy.
-    var categories: [Int]
+    let categories: [Int]
     /// The terms assigned to the object in the post_tag taxonomy.
-    var tags: [Int]
+    let tags: [Int]
     
-    init?(json: [String:Any]) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-        
-        guard
-            let rawDate = json["date_gmt"] as? String,
-            let date = dateFormatter.date(from: rawDate),
-            let guidArray = json["guid"] as? [String:Any],
-            let guid = guidArray["rendered"] as? String,
-            let id = json["id"] as? Int,
-            let rawLink = json["date_gmt"] as? String,
-            let link = URL(string: rawLink),
-            let rawModified = json["modified_gmt"] as? String,
-            let modified = dateFormatter.date(from: rawModified),
-            let rawStatus = json["status"] as? String,
-            let status = Status(rawValue: rawStatus),
-            let type = json["type"] as? String,
-            let titleArray = json["title"] as? [String:Any],
-            let title = titleArray["rendered"] as? String,
-            let contentArray = json["content"] as? [String:Any],
-            let renderedContent = contentArray["rendered"] as? String,
-            let contentProtected = contentArray["protected"],
-            let author = json["author"] as? Int,
-            let excerptArray = json["excerpt"] as? [String:Any],
-            let renderedExcerpt = excerptArray["rendered"] as? String,
-            let excerptProtected = excerptArray["protected"],
-            let featuredMedia = json["featured_media"] as? Int,
-            let rawCommentStatus = json["comment_status"] as? String,
-            let commentStatus = CommentStatus(rawValue: rawCommentStatus),
-            let rawPingStatus = json["ping_status"] as? String,
-            let pingStatus = PingStatus(rawValue: rawPingStatus),
-            let rawFormat = json["format"] as? String,
-            let format = Format(rawValue: rawFormat),
-            let meta = json["meta"] as? [String],
-            let sticky = json["sticky"] as? Bool,
-            let template = json["template"] as? String,
-            let categories = json["categories"] as? [Int],
-            let tags = json["tags"] as? [Int]
-        else { return nil }
-        
-        self.date = date
-        self.guid = guid
-        self.id = id
-        self.link = link
-        self.modified = modified
-        self.status = status
-        self.type = type
-        self.title = title
-        self.content = (rendered: renderedContent, protected: contentProtected as? String == "true")
-        self.author = author
-        self.excerpt = (rendered: renderedExcerpt, protected: excerptProtected as? String == "true")
-        self.featuredMedia = featuredMedia
-        self.commentStatus = commentStatus
-        self.pingStatus = pingStatus
-        self.format = format
-        self.meta = meta
-        self.sticky = sticky
-        self.template = template
-        self.categories = categories
-        self.tags = tags
+    enum CodingKeys: String, CodingKey {
+        case id, link, status, type, title, content, author, excerpt
+        case format, meta, sticky, template, categories, tags
+        case date = "date_gmt"
+        case guid = "guid"
+        case modified = "modified_gmt"
+        case featuredMedia = "featured_media"
+        case commentStatus = "comment_status"
+        case pingStatus = "ping_status"
     }
 }
