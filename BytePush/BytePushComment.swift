@@ -9,10 +9,6 @@
 import Foundation
 
 public struct BytePushComment: Codable {
-    struct Content: Codable {
-        let rendered: String
-    }
-    
     /// Unique identifier for the object.
     let id: Int
     /// The ID of the user object, if author was a user; otherwise, 0.
@@ -22,7 +18,7 @@ public struct BytePushComment: Codable {
     /// URL for the object author.
     let authorURL: URL?
     /// The content for the object.
-    let content: Content
+    let content: Rendered
     /// The date the object was published, as GMT.
     let date: Date
     /// URL to the object.

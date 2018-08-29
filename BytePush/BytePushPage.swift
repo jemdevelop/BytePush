@@ -36,9 +36,7 @@ public struct BytePushPage: Codable {
         let rendered: String
         let protected: Bool
     }
-    struct Rendered: Codable {
-        let rendered: String
-    }
+    
     /// The date the object was published, in the site's timezone.
     let date: Date
     /// The globally unique identifier for the object.
