@@ -37,7 +37,7 @@ public struct BytePushPost: Codable {
         let protected: Bool
     }
     
-    /// The date the object was published, in the site's timezone.
+    /// The date the object was published, as GMT.
     let date: Date
     /// The globally unique identifier for the object.
     let guid: Rendered
@@ -45,7 +45,7 @@ public struct BytePushPost: Codable {
     let id: Int
     /// URL to the object.
     let link: URL
-    /// The date the object was published, as GMT.
+    /// The date the object was last modified, as GMT.
     let modified: Date
     /// An alphanumeric identifier for the object unique to its type.
     let slug: String
