@@ -8,8 +8,19 @@
 
 import Foundation
 
-struct User {
+public struct BytePushUser: Codable {
     /// Unique identifier for the user.
     let id: Int
-    
+    /// Display name for the user.
+    let name: String
+    /// URL of the user.
+    let url: URL?
+    /// Description of the user.
+    let description: String?
+    /// Author URL of the user.
+    let link: URL
+    /// Avatar URLs for the user.
+    let avatarURLs: [String:URL]
+    /// Meta fields.
+    let meta: [String]
 }
