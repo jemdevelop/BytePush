@@ -20,18 +20,6 @@ public struct BytePushPage: Codable {
         case open
         case closed
     }
-    enum Format: String, Codable {
-        case standard
-        case aside
-        case chat
-        case gallery
-        case link
-        case image
-        case quote
-        case status
-        case video
-        case audio
-    }
     struct PostText: Codable {
         let rendered: String
         let protected: Bool
