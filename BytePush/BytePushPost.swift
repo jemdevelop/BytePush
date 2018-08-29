@@ -49,6 +49,8 @@ public struct BytePushPost: Codable {
     let link: URL
     /// The date the object was last modified, in the site's timezone.
     let modified: Date
+    /// An alphanumeric identifier for the object unique to its type.
+    let slug: String
     /// A named status for the object.
     let status: Status
     /// Type of Post for the object.
@@ -81,7 +83,7 @@ public struct BytePushPost: Codable {
     let tags: [Int]
     
     enum CodingKeys: String, CodingKey {
-        case id, link, status, type, title, content, author, excerpt
+        case id, link, slug, status, type, title, content, author, excerpt
         case format, meta, sticky, template, categories, tags
         case date = "date_gmt"
         case guid = "guid"
