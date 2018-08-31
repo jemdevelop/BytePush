@@ -73,7 +73,6 @@
 		05005A2F2136188D00B1BB1B = {
 			isa = PBXGroup;
 			children = (
-				052F32202139A8D300BBEC47 /* BytePushAuthenticationMethod.swift */,
 				05005A3B2136188D00B1BB1B /* BytePush */,
 				05005A462136188D00B1BB1B /* BytePushTests */,
 				05005A3A2136188D00B1BB1B /* Products */,
@@ -94,6 +93,7 @@
 			children = (
 				0552FDF421366D2D00A61CC5 /* DataTypes */,
 				05005A3C2136188D00B1BB1B /* BytePush.h */,
+				052F32202139A8D300BBEC47 /* BytePushAuthenticationMethod.swift */,
 				05005A532136191A00B1BB1B /* BytePushAPI.swift */,
 				05005A3D2136188D00B1BB1B /* Info.plist */,
 			);
