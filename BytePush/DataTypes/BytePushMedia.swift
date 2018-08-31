@@ -75,7 +75,7 @@ public struct BytePushMedia: Codable {
     /// URL to the original attachment file.
     let sourceURL: URL
     
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case guid, id, link, slug, status, type, title, author, template
         case caption, description, post
         case date = "date_gmt"

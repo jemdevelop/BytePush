@@ -44,7 +44,7 @@ public struct BytePushPage: Codable {
     /// The theme file to use to display the object.
     let template: String
     
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case id, link, slug, status, type, title, content, author, excerpt, template
         case date = "date_gmt"
         case guid = "guid"

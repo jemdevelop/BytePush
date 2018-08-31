@@ -63,7 +63,7 @@ public struct BytePushPost: Codable {
     /// The terms assigned to the object in the post_tag taxonomy.
     let tags: [Int]
     
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case id, link, slug, status, type, title, content, author, excerpt
         case format, sticky, template, categories, tags
         case date = "date_gmt"
