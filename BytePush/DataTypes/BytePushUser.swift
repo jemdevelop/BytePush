@@ -14,7 +14,7 @@ public struct BytePushUser: Codable {
     /// Display name for the user.
     let name: String
     /// URL of the user.
-    let url: URL?
+    let url: String
     /// Description of the user.
     let description: String?
     /// Author URL of the user.
