@@ -43,8 +43,8 @@ public struct BytePushMedia: Codable {
     let type: String
     let title: Rendered
     let author: Int
-    let comment_status: AllowedStatus
-    let ping_status: AllowedStatus
+    let commentStatus: AllowedStatus
+    let pingStatus: AllowedStatus
     let template: String
     let altText: String
     let caption: Rendered
@@ -56,6 +56,16 @@ public struct BytePushMedia: Codable {
     let sourceURL: URL
     
     enum CodingKeys: String, CodingKey {
-        // TODO
+        case guid, id, link, slug, status, type, title, author, template
+        case caption, description, post
+        case date = "date_gmt"
+        case modified = "modified_gmt"
+        case commentStatus = "comment_status"
+        case pingStatus = "ping_status"
+        case altText = "alt_text"
+        case mediaType = "media_type"
+        case mimeType = "mime_type"
+        case mediaDetails = "media_details"
+        case sourceURL = "source_url"
     }
 }
