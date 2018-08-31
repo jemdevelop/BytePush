@@ -22,6 +22,7 @@ enum Status: String, Codable {
     case draft = "draft"
     case pending = "pending"
     case priv = "private"
+    case inherit = "inherit"
 }
 
 enum AllowedStatus: String, Codable {
