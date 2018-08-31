@@ -20,7 +20,6 @@
 		0552FDF12136644100A61CC5 /* BytePushMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDF02136644100A61CC5 /* BytePushMedia.swift */; };
 		0552FDF3213666FA00A61CC5 /* BytePushCommonTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDF2213666FA00A61CC5 /* BytePushCommonTypes.swift */; };
 		05C3BFBB21372FBC00C78A5D /* BytePushAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C3BFBA21372FBC00C78A5D /* BytePushAuthenticator.swift */; };
-		05C3BFBD213796D000C78A5D /* BytePushRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C3BFBC213796D000C78A5D /* BytePushRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		0552FDF02136644100A61CC5 /* BytePushMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushMedia.swift; sourceTree = "<group>"; };
 		0552FDF2213666FA00A61CC5 /* BytePushCommonTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushCommonTypes.swift; sourceTree = "<group>"; };
 		05C3BFBA21372FBC00C78A5D /* BytePushAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushAuthenticator.swift; sourceTree = "<group>"; };
-		05C3BFBC213796D000C78A5D /* BytePushRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +94,6 @@
 				0552FDF421366D2D00A61CC5 /* DataTypes */,
 				05005A3C2136188D00B1BB1B /* BytePush.h */,
 				05005A532136191A00B1BB1B /* BytePushAPI.swift */,
-				05C3BFBC213796D000C78A5D /* BytePushRequest.swift */,
 				05C3BFBA21372FBC00C78A5D /* BytePushAuthenticator.swift */,
 				05005A3D2136188D00B1BB1B /* Info.plist */,
 			);
@@ -236,7 +233,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05C3BFBD213796D000C78A5D /* BytePushRequest.swift in Sources */,
 				05005A542136191A00B1BB1B /* BytePushAPI.swift in Sources */,
 				05005A5621361A8B00B1BB1B /* BytePushPost.swift in Sources */,
 				0552FDF12136644100A61CC5 /* BytePushMedia.swift in Sources */,
