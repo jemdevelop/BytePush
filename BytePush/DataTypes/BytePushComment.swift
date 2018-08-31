@@ -24,7 +24,7 @@ public struct BytePushComment: Codable {
     /// URL to the object.
     let link: URL
     /// The ID for the parent of the object.
-    let parent: Int?
+    let parent: Int
     /// The ID of the associated post object.
     let post: Int
     /// State of the object.
