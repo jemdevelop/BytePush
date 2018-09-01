@@ -14,6 +14,7 @@
 		05005A5621361A8B00B1BB1B /* BytePushPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05005A5521361A8B00B1BB1B /* BytePushPost.swift */; };
 		05005A58213625C500B1BB1B /* BytePushUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05005A57213625C500B1BB1B /* BytePushUser.swift */; };
 		052F32212139A8D300BBEC47 /* BytePushAuthenticationMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052F32202139A8D300BBEC47 /* BytePushAuthenticationMethod.swift */; };
+		052F32252139C37C00BBEC47 /* BytePushAuthenticationMethodOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052F32242139C37C00BBEC47 /* BytePushAuthenticationMethodOAuth.swift */; };
 		0552FDE72136562100A61CC5 /* BytePushCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDE62136562100A61CC5 /* BytePushCategory.swift */; };
 		0552FDE921365CF200A61CC5 /* BytePushTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDE821365CF200A61CC5 /* BytePushTag.swift */; };
 		0552FDEB21365E2C00A61CC5 /* BytePushPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDEA21365E2C00A61CC5 /* BytePushPage.swift */; };
@@ -43,6 +44,7 @@
 		05005A5521361A8B00B1BB1B /* BytePushPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPost.swift; sourceTree = "<group>"; };
 		05005A57213625C500B1BB1B /* BytePushUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushUser.swift; sourceTree = "<group>"; };
 		052F32202139A8D300BBEC47 /* BytePushAuthenticationMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushAuthenticationMethod.swift; sourceTree = "<group>"; };
+		052F32242139C37C00BBEC47 /* BytePushAuthenticationMethodOAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushAuthenticationMethodOAuth.swift; sourceTree = "<group>"; };
 		0552FDE62136562100A61CC5 /* BytePushCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushCategory.swift; sourceTree = "<group>"; };
 		0552FDE821365CF200A61CC5 /* BytePushTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushTag.swift; sourceTree = "<group>"; };
 		0552FDEA21365E2C00A61CC5 /* BytePushPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPage.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				0552FDF421366D2D00A61CC5 /* DataTypes */,
 				05005A3C2136188D00B1BB1B /* BytePush.h */,
 				052F32202139A8D300BBEC47 /* BytePushAuthenticationMethod.swift */,
+				052F32242139C37C00BBEC47 /* BytePushAuthenticationMethodOAuth.swift */,
 				05005A532136191A00B1BB1B /* BytePushAPI.swift */,
 				05005A3D2136188D00B1BB1B /* Info.plist */,
 			);
@@ -241,6 +244,7 @@
 				0552FDF3213666FA00A61CC5 /* BytePushCommonTypes.swift in Sources */,
 				05005A58213625C500B1BB1B /* BytePushUser.swift in Sources */,
 				0552FDEB21365E2C00A61CC5 /* BytePushPage.swift in Sources */,
+				052F32252139C37C00BBEC47 /* BytePushAuthenticationMethodOAuth.swift in Sources */,
 				0552FDEF2136610D00A61CC5 /* BytePushComment.swift in Sources */,
 				0552FDE72136562100A61CC5 /* BytePushCategory.swift in Sources */,
 			);
