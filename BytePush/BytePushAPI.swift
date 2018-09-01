@@ -20,26 +20,19 @@ enum Endpoint: String {
 
 public class BytePushAPI {
     /// The host address of the blog.
-    let host: URL
-    var authenticator: BytePushAuthenticationMethod?
+    let hostURL: URL
     /// The login page URL of the blog.
     var loginPage: URL {
-        return URL(string: "/wp-login.php", relativeTo: host)!
+        return URL(string: "/wp-login.php", relativeTo: hostURL)!
     }
     /// The admin page URL of the blog.
     var adminPage: URL {
-        return URL(string: "wp-admin/admin.php", relativeTo: host)!
+        return URL(string: "wp-admin/admin.php", relativeTo: hostURL)!
     }
     
     /// Creates a new instance with a given host URL and authentication method.
-    init(blogURL host: URL, authenticator: BytePushAuthenticationMethod?) {
-        self.host = host
-        self.authenticator = authenticator
-    }
-    
-    /// Creates a new instance with a given host URL.
-    convenience init(blogURL host: URL) {
-        self.init(blogURL: host, authenticator: nil)
+    init(blogURL hostURL: URL) {
+        self.hostURL = hostURL
     }
     
 }
