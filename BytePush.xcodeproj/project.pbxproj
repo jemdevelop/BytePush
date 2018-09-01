@@ -131,9 +131,9 @@
 		05A84C51213B470100A20C94 /* QueryTypes */ = {
 			isa = PBXGroup;
 			children = (
-				05A84C56213B4DC500A20C94 /* BytePushPostQuery.swift */,
-				05A84C54213B4BA600A20C94 /* BytePushCommonRequestTypes.swift */,
 				05A84C58213B5AA000A20C94 /* WordPressQuery.swift */,
+				05A84C54213B4BA600A20C94 /* BytePushCommonRequestTypes.swift */,
+				05A84C56213B4DC500A20C94 /* BytePushPostQuery.swift */,
 			);
 			path = QueryTypes;
 			sourceTree = "<group>";
