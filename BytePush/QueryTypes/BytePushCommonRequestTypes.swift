@@ -16,8 +16,3 @@ enum Order: String, Codable {
     case ascending = "asc"
     case descending = "desc"
 }
-
-enum OrderBy: String, Codable {
-    case author, date, id, include, modified, parent, relevance
-    case slug, title
-}

@@ -9,6 +9,10 @@
 import Foundation
 
 struct BytePushPostQuery: WordPressQuery {
+    enum OrderBy: String, Codable {
+        case author, date, id, include, modified, parent, relevance
+        case slug, title
+    }
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?
     /// Current page of the collection.
