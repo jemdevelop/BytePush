@@ -49,14 +49,17 @@ struct BytePushCategoryQuery: WordPressQuery {
         self.queryURL = queryURL
     }
     
-    func execute(result: @escaping (WordPressQueryResult<BytePushCategory>) -> Void) {
+    func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressQueryResult<BytePushCategory>) -> Void) {
         guard var components = URLComponents(url: queryURL, resolvingAgainstBaseURL: false) else {
-            // Do something?
+            result(.failure(WordPressQueryError.couldNotConstructURL))
             return
         }
         components.queryItems = queryItems
+        if let item = item {
+            components.queryItems?.append(item)
+        }
         guard let url = components.url else {
-            // completion error?
+            result(.failure(WordPressQueryError.couldNotConstructURL))
             return
         }
         var request = URLRequest(url: url)

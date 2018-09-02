@@ -69,14 +69,17 @@ struct BytePushMediaQuery: WordPressQuery {
         self.queryURL = queryURL
     }
     
-    func execute(result: @escaping (WordPressQueryResult<BytePushMedia>) -> Void) {
+    func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressQueryResult<BytePushMedia>) -> Void) {
         guard var components = URLComponents(url: queryURL, resolvingAgainstBaseURL: false) else {
-            // Do something?
+            result(.failure(WordPressQueryError.couldNotConstructURL))
             return
         }
         components.queryItems = queryItems
+        if let item = item {
+            components.queryItems?.append(item)
+        }
         guard let url = components.url else {
-            // completion error?
+            result(.failure(WordPressQueryError.couldNotConstructURL))
             return
         }
         var request = URLRequest(url: url)
