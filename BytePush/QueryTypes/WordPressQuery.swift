@@ -47,8 +47,4 @@ extension WordPressQuery {
             }
         }
     }
-    
-    var request: URLRequest? {
-        
-    }
 }
