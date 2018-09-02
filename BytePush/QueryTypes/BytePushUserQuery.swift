@@ -75,6 +75,6 @@ struct BytePushUserQuery: WordPressQuery {
                     result(.failure(err))
                 }
             }
-        }
+        }.resume()
     }
 }

@@ -92,6 +92,6 @@ struct BytePushPageQuery: WordPressQuery {
                     result(.failure(err))
                 }
             }
-        }
+        }.resume()
     }
 }
