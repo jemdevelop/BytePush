@@ -26,6 +26,7 @@
 		05A84C5D213B6B7600A20C94 /* BytePushTagQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C5C213B6B7600A20C94 /* BytePushTagQuery.swift */; };
 		05A84C5F213B6F0800A20C94 /* BytePushPageQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C5E213B6F0800A20C94 /* BytePushPageQuery.swift */; };
 		05A84C61213B70E900A20C94 /* BytePushCommentQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C60213B70E900A20C94 /* BytePushCommentQuery.swift */; };
+		05A84C63213B742B00A20C94 /* BytePushMediaQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C62213B742B00A20C94 /* BytePushMediaQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		05A84C5C213B6B7600A20C94 /* BytePushTagQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushTagQuery.swift; sourceTree = "<group>"; };
 		05A84C5E213B6F0800A20C94 /* BytePushPageQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPageQuery.swift; sourceTree = "<group>"; };
 		05A84C60213B70E900A20C94 /* BytePushCommentQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushCommentQuery.swift; sourceTree = "<group>"; };
+		05A84C62213B742B00A20C94 /* BytePushMediaQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushMediaQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				05A84C54213B4BA600A20C94 /* BytePushCommonRequestTypes.swift */,
 				05A84C56213B4DC500A20C94 /* BytePushPostQuery.swift */,
 				05A84C60213B70E900A20C94 /* BytePushCommentQuery.swift */,
+				05A84C62213B742B00A20C94 /* BytePushMediaQuery.swift */,
 				05A84C5A213B67F600A20C94 /* BytePushCategoryQuery.swift */,
 				05A84C5C213B6B7600A20C94 /* BytePushTagQuery.swift */,
 				05A84C5E213B6F0800A20C94 /* BytePushPageQuery.swift */,
@@ -271,6 +274,7 @@
 				05A84C5B213B67F600A20C94 /* BytePushCategoryQuery.swift in Sources */,
 				0552FDEB21365E2C00A61CC5 /* BytePushPage.swift in Sources */,
 				05A84C57213B4DC500A20C94 /* BytePushPostQuery.swift in Sources */,
+				05A84C63213B742B00A20C94 /* BytePushMediaQuery.swift in Sources */,
 				05A84C55213B4BA600A20C94 /* BytePushCommonRequestTypes.swift in Sources */,
 				0552FDEF2136610D00A61CC5 /* BytePushComment.swift in Sources */,
 				05A84C59213B5AA000A20C94 /* WordPressQuery.swift in Sources */,
