@@ -13,17 +13,29 @@ struct BytePushTagQuery: WordPressQuery {
         case id, include, name, slug, description, count
         case termGroup = "term_group"
     }
+    /// Scope under which the request is made; determines fields present in response.
     var context: Context?
+    /// Current page of the collection.
     var page: Int?
+    /// Maximum number of items to be returned in result set.
     var perPage: Int?
+    /// Limit results to those matching a string.
     var search: String?
+    /// Ensure result set excludes specific IDs.
     var exclude: [Int]?
+    /// Limit result set to specific IDs.
     var include: [Int]?
+    /// Offset the result set by a specific number of items.
     var offset: Int?
+    /// Order sort attribute ascending or descending.
     var order: Order?
+    /// Sort collection by term attribute.
     var orderby: OrderBy?
+    /// Whether to hide terms not assigned to any posts.
     var hideEmpty: Bool?
+    /// Limit result set to terms assigned to a specific post.
     var post: Int?
+    /// Limit result set to terms with one or more specific slugs.
     var slug: [String]?
     
     enum CodingKeys: String, CodingKey {
