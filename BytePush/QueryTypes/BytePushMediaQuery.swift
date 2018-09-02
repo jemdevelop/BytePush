@@ -34,4 +34,14 @@ struct BytePushMediaQuery: WordPressQuery {
     var status: [String]?
     var mediaType: MediaType?
     var mimeType: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case context, page, search, after, author, before, exclude, include
+        case offset, order, orderby, parent, slug, status
+        case perPage = "per_page"
+        case authorExclude = "author_exclude"
+        case parentExclude = "parent_exclude"
+        case mediaType = "media_type"
+        case mimeType = "mime_type"
+    }
 }
