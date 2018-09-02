@@ -24,6 +24,13 @@ extension WordPressQuery {
             else {
                 return nil
         }
-        return dict.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
+        return dict.map {
+            if let array = $0.value as? [Any] {
+                let newValue = array.map { "\($0)" }.joined(separator: ",")
+                return URLQueryItem(name: $0.key, value: newValue)
+            } else {
+                return URLQueryItem(name: $0.key, value: "\($0.value)")
+            }
+        }
     }
 }
