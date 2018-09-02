@@ -13,6 +13,7 @@ struct BytePushPostQuery: WordPressQuery {
         case author, date, id, include, modified, parent, relevance
         case slug, title
     }
+    let endpoint = Endpoint.posts
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?
     /// Current page of the collection.
