@@ -9,13 +9,12 @@
 import Foundation
 
 struct BytePushUserQuery: WordPressQuery {
+    
     enum Orderby: String, Codable {
         case id, include, name, slug, email, url
         case registeredDate = "registered_date"
     }
-    var endpoint: WordPressEndpoint {
-        return .users
-    }
+    var queryURL: URL
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?
     /// Current page of the collection.
@@ -43,5 +42,39 @@ struct BytePushUserQuery: WordPressQuery {
         case context, page, search, exclude, include, offset, order, orderby
         case slug, roles
         case perPage = "per_page"
+    }
+    
+    init(queryURL: URL) {
+        self.queryURL = queryURL
+    }
+    
+    func execute(result: @escaping (WordPressQueryResult<BytePushUser>) -> Void) {
+        guard var components = URLComponents(url: queryURL, resolvingAgainstBaseURL: false) else {
+            // Do something?
+            return
+        }
+        components.queryItems = queryItems
+        guard let url = components.url else {
+            // completion error?
+            return
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                do {
+                    let decoder = JSONDecoder()
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+                    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+                    decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                    let requestResult = try decoder.decode([BytePushUser].self, from: data)
+                    result(.success(requestResult))
+                } catch let err {
+                    result(.failure(err))
+                }
+            }
+        }
     }
 }

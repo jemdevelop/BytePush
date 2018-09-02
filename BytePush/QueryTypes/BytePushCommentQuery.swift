@@ -13,9 +13,7 @@ struct BytePushCommentQuery: WordPressQuery {
         case date, id, include, post, parent, type
         case dateGMT = "date_gmt"
     }
-    var endpoint: WordPressEndpoint {
-        return .comments
-    }
+    var queryURL: URL
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?
     /// Current page of the collection.
@@ -64,5 +62,39 @@ struct BytePushCommentQuery: WordPressQuery {
         case authorExclude = "author_exclude"
         case authorEmail = "author_email"
         case parentExclude = "parent_exclude"
+    }
+    
+    init(queryURL: URL) {
+        self.queryURL = queryURL
+    }
+    
+    func execute(result: @escaping (WordPressQueryResult<BytePushComment>) -> Void) {
+        guard var components = URLComponents(url: queryURL, resolvingAgainstBaseURL: false) else {
+            // Do something?
+            return
+        }
+        components.queryItems = queryItems
+        guard let url = components.url else {
+            // completion error?
+            return
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                do {
+                    let decoder = JSONDecoder()
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+                    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+                    decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                    let requestResult = try decoder.decode([BytePushComment].self, from: data)
+                    result(.success(requestResult))
+                } catch let err {
+                    result(.failure(err))
+                }
+            }
+        }
     }
 }
