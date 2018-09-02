@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Endpoint: String {
+enum WordPressEndpoint: String {
     case posts = "/wp/v2/posts"
     case categories = "/wp/v2/categories"
     case tags = "/wp/v2/tags"
@@ -19,6 +19,7 @@ enum Endpoint: String {
 }
 
 public class BytePushAPI {
+    let baseRoute = "/wp-json"
     /// The host address of the blog.
     let hostURL: URL
     /// The login page URL of the blog.
@@ -29,10 +30,23 @@ public class BytePushAPI {
     var adminPage: URL {
         return URL(string: "wp-admin/admin.php", relativeTo: hostURL)!
     }
+    var hostURLComponents: URLComponents {
+        return URLComponents(url: hostURL, resolvingAgainstBaseURL: false)!
+    }
     
-    /// Creates a new instance with a given host URL and authentication method.
     init(blogURL hostURL: URL) {
         self.hostURL = hostURL
     }
     
+    func getPostPage(_ page: Int, postsPerPage perPage: Int? = nil, result: @escaping (WordPressQueryResult<BytePushPost>) -> Void) {
+        var urlComponents = hostURLComponents
+        urlComponents.path = baseRoute + WordPressEndpoint.posts.rawValue
+        guard let url = urlComponents.url else {
+            return
+        }
+        var query = BytePushPostQuery(queryURL: url)
+        query.page = page
+        query.perPage = perPage
+        query.execute(result: result)
+    }
 }

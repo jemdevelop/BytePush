@@ -8,8 +8,15 @@
 
 import Foundation
 
-protocol WordPressQuery: Codable {
-    var endpoint: WordPressEndpoint { get }
+enum WordPressQueryResult<BytePushDataType> {
+    case success([BytePushDataType])
+    case failure(Error)
+}
+
+protocol WordPressQuery: Encodable {
+    associatedtype BytePushDataType
+    var queryURL: URL { get set }
+    func execute(result: @escaping (WordPressQueryResult<BytePushDataType>) -> Void)
 }
 
 extension WordPressQuery {
