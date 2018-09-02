@@ -13,10 +13,14 @@ enum WordPressQueryResult<BytePushDataType> {
     case failure(Error)
 }
 
+enum WordPressQueryError: Error {
+    case couldNotConstructURL
+}
+
 protocol WordPressQuery: Encodable {
     associatedtype BytePushDataType
     var queryURL: URL { get set }
-    func execute(result: @escaping (WordPressQueryResult<BytePushDataType>) -> Void)
+    func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressQueryResult<BytePushDataType>) -> Void)
 }
 
 extension WordPressQuery {
@@ -42,5 +46,9 @@ extension WordPressQuery {
                 return URLQueryItem(name: $0.key, value: "\($0.value)")
             }
         }
+    }
+    
+    var request: URLRequest? {
+        
     }
 }
