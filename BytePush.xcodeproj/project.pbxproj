@@ -27,6 +27,7 @@
 		05A84C5F213B6F0800A20C94 /* BytePushPageQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C5E213B6F0800A20C94 /* BytePushPageQuery.swift */; };
 		05A84C61213B70E900A20C94 /* BytePushCommentQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C60213B70E900A20C94 /* BytePushCommentQuery.swift */; };
 		05A84C63213B742B00A20C94 /* BytePushMediaQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C62213B742B00A20C94 /* BytePushMediaQuery.swift */; };
+		05A84C65213B774700A20C94 /* BytePushUserQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C64213B774700A20C94 /* BytePushUserQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		05A84C5E213B6F0800A20C94 /* BytePushPageQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPageQuery.swift; sourceTree = "<group>"; };
 		05A84C60213B70E900A20C94 /* BytePushCommentQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushCommentQuery.swift; sourceTree = "<group>"; };
 		05A84C62213B742B00A20C94 /* BytePushMediaQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushMediaQuery.swift; sourceTree = "<group>"; };
+		05A84C64213B774700A20C94 /* BytePushUserQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushUserQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				05A84C56213B4DC500A20C94 /* BytePushPostQuery.swift */,
 				05A84C60213B70E900A20C94 /* BytePushCommentQuery.swift */,
 				05A84C62213B742B00A20C94 /* BytePushMediaQuery.swift */,
+				05A84C64213B774700A20C94 /* BytePushUserQuery.swift */,
 				05A84C5A213B67F600A20C94 /* BytePushCategoryQuery.swift */,
 				05A84C5C213B6B7600A20C94 /* BytePushTagQuery.swift */,
 				05A84C5E213B6F0800A20C94 /* BytePushPageQuery.swift */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05005A542136191A00B1BB1B /* BytePushAPI.swift in Sources */,
+				05A84C65213B774700A20C94 /* BytePushUserQuery.swift in Sources */,
 				05A84C5D213B6B7600A20C94 /* BytePushTagQuery.swift in Sources */,
 				05A84C61213B70E900A20C94 /* BytePushCommentQuery.swift in Sources */,
 				05005A5621361A8B00B1BB1B /* BytePushPost.swift in Sources */,
