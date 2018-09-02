@@ -27,7 +27,7 @@ struct BytePushPostQuery: WordPressQuery {
     var author: [Int]?
     /// Ensure result set excludes posts assigned to specific authors.
     var authorExclude: [Int]?
-    /// Limit response to posts published before a given ISO8601 compliant date.
+    /// Limit response to posts published before a given date.
     var before: Date?
     /// Ensure result set excludes specific IDs.
     var exclude: [Int]?
