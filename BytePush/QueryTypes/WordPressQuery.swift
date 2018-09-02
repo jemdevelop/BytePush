@@ -8,7 +8,9 @@
 
 import Foundation
 
-protocol WordPressQuery: Codable { }
+protocol WordPressQuery: Codable {
+    var endpoint: WordPressEndpoint { get }
+}
 
 extension WordPressQuery {
     var queryItems: [URLQueryItem]? {
