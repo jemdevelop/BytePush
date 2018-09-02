@@ -49,4 +49,13 @@ struct BytePushPostQuery: WordPressQuery {
     var tagsExclude: [Int]?
     /// Limit result set to items that are sticky.
     var sticky: Bool?
+    
+    private enum CodingKeys: String, CodingKey {
+        case context, page, search, after, author, before, exclude, include, offset
+        case order, orderby, slug, status, categories, tags, sticky
+        case perPage = "per_page"
+        case authorExclude = "author_exclude"
+        case categoriesExclude = "categories_exclude"
+        case tagsExclude = "tags_exclude"
+    }
 }
