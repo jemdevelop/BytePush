@@ -12,6 +12,7 @@ struct BytePushPageQuery: WordPressQuery {
     enum OrderBy: String, Codable {
         case author, date, id, include, modified, parent, relevance
         case slug, title
+        case menuOrder = "menu_order"
     }
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?
