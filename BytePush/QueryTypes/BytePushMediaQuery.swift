@@ -15,7 +15,9 @@ struct BytePushMediaQuery: WordPressQuery {
     enum MediaType: String, Codable {
         case image, video, audio, application
     }
-    let endpoint = Endpoint.media
+    var endpoint: WordPressEndpoint {
+        return .media
+    }
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?
     /// Current page of the collection.

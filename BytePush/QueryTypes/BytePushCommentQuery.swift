@@ -13,7 +13,9 @@ struct BytePushCommentQuery: WordPressQuery {
         case date, id, include, post, parent, type
         case dateGMT = "date_gmt"
     }
-    let endpoint = Endpoint.comments
+    var endpoint: WordPressEndpoint {
+        return .comments
+    }
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?
     /// Current page of the collection.

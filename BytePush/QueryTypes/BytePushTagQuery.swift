@@ -13,7 +13,9 @@ struct BytePushTagQuery: WordPressQuery {
         case id, include, name, slug, description, count
         case termGroup = "term_group"
     }
-    let endpoint = Endpoint.tags
+    var endpoint: WordPressEndpoint {
+        return .tags
+    }
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?
     /// Current page of the collection.

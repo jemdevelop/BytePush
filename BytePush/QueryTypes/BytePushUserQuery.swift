@@ -13,7 +13,9 @@ struct BytePushUserQuery: WordPressQuery {
         case id, include, name, slug, email, url
         case registeredDate = "registered_date"
     }
-    let endpoint = Endpoint.users
+    var endpoint: WordPressEndpoint {
+        return .users
+    }
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?
     /// Current page of the collection.

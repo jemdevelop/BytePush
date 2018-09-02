@@ -14,7 +14,9 @@ struct BytePushPageQuery: WordPressQuery {
         case slug, title
         case menuOrder = "menu_order"
     }
-    let endpoint = Endpoint.pages
+    var endpoint: WordPressEndpoint {
+        return .pages
+    }
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?
     /// Current page of the collection.
