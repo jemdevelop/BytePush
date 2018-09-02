@@ -24,6 +24,7 @@
 		05A84C59213B5AA000A20C94 /* WordPressQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C58213B5AA000A20C94 /* WordPressQuery.swift */; };
 		05A84C5B213B67F600A20C94 /* BytePushCategoryQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C5A213B67F600A20C94 /* BytePushCategoryQuery.swift */; };
 		05A84C5D213B6B7600A20C94 /* BytePushTagQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C5C213B6B7600A20C94 /* BytePushTagQuery.swift */; };
+		05A84C5F213B6F0800A20C94 /* BytePushPageQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C5E213B6F0800A20C94 /* BytePushPageQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		05A84C58213B5AA000A20C94 /* WordPressQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPressQuery.swift; sourceTree = "<group>"; };
 		05A84C5A213B67F600A20C94 /* BytePushCategoryQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushCategoryQuery.swift; sourceTree = "<group>"; };
 		05A84C5C213B6B7600A20C94 /* BytePushTagQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushTagQuery.swift; sourceTree = "<group>"; };
+		05A84C5E213B6F0800A20C94 /* BytePushPageQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPageQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				05A84C56213B4DC500A20C94 /* BytePushPostQuery.swift */,
 				05A84C5A213B67F600A20C94 /* BytePushCategoryQuery.swift */,
 				05A84C5C213B6B7600A20C94 /* BytePushTagQuery.swift */,
+				05A84C5E213B6F0800A20C94 /* BytePushPageQuery.swift */,
 			);
 			path = QueryTypes;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				05005A542136191A00B1BB1B /* BytePushAPI.swift in Sources */,
 				05A84C5D213B6B7600A20C94 /* BytePushTagQuery.swift in Sources */,
 				05005A5621361A8B00B1BB1B /* BytePushPost.swift in Sources */,
+				05A84C5F213B6F0800A20C94 /* BytePushPageQuery.swift in Sources */,
 				0552FDF12136644100A61CC5 /* BytePushMedia.swift in Sources */,
 				0552FDE921365CF200A61CC5 /* BytePushTag.swift in Sources */,
 				0552FDF3213666FA00A61CC5 /* BytePushCommonDataTypes.swift in Sources */,
