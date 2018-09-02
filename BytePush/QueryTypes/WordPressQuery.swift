@@ -26,6 +26,7 @@ extension WordPressQuery {
         }
         return dict.map {
             if let array = $0.value as? [Any] {
+                // Arrays must be converted to comma-separated value parameters
                 let newValue = array.map { "\($0)" }.joined(separator: ",")
                 return URLQueryItem(name: $0.key, value: newValue)
             } else {
