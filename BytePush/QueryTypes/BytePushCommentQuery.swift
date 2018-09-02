@@ -33,4 +33,13 @@ struct BytePushCommentQuery: WordPressQuery {
     var status: String?
     var type: String?
     var password: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case context, page, search, after, author, before, exclude, include, offset
+        case order, orderby, parent, post, status, type, password
+        case perPage = "per_page"
+        case authorExclude = "author_exclude"
+        case authorEmail = "author_email"
+        case parentExclude = "parent_exclude"
+    }
 }
