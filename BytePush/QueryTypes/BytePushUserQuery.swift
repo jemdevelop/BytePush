@@ -24,4 +24,10 @@ struct BytePushUserQuery: WordPressQuery {
     var orderby: Orderby?
     var slug: [String]?
     var roles: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case context, page, search, exclude, include, offset, order, orderby
+        case slug, roles
+        case perPage = "per_page"
+    }
 }
