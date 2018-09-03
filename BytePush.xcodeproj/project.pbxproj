@@ -19,6 +19,7 @@
 		0552FDF12136644100A61CC5 /* BytePushMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDF02136644100A61CC5 /* BytePushMedia.swift */; };
 		0552FDF3213666FA00A61CC5 /* BytePushCommonDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDF2213666FA00A61CC5 /* BytePushCommonDataTypes.swift */; };
 		055BA33D213DF9F700D71598 /* WordPressURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055BA33C213DF9F700D71598 /* WordPressURL.swift */; };
+		055BA343213DFE9400D71598 /* BytePushUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055BA342213DFE9400D71598 /* BytePushUtilities.swift */; };
 		05A84C57213B4DC500A20C94 /* BytePushPostQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C56213B4DC500A20C94 /* BytePushPostQuery.swift */; };
 		05A84C59213B5AA000A20C94 /* WordPressQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C58213B5AA000A20C94 /* WordPressQuery.swift */; };
 		05A84C5B213B67F600A20C94 /* BytePushCategoryQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C5A213B67F600A20C94 /* BytePushCategoryQuery.swift */; };
@@ -55,6 +56,7 @@
 		0552FDF02136644100A61CC5 /* BytePushMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushMedia.swift; sourceTree = "<group>"; };
 		0552FDF2213666FA00A61CC5 /* BytePushCommonDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushCommonDataTypes.swift; sourceTree = "<group>"; };
 		055BA33C213DF9F700D71598 /* WordPressURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPressURL.swift; sourceTree = "<group>"; };
+		055BA342213DFE9400D71598 /* BytePushUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushUtilities.swift; sourceTree = "<group>"; };
 		05A84C56213B4DC500A20C94 /* BytePushPostQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BytePushPostQuery.swift; sourceTree = "<group>"; };
 		05A84C58213B5AA000A20C94 /* WordPressQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPressQuery.swift; sourceTree = "<group>"; };
 		05A84C5A213B67F600A20C94 /* BytePushCategoryQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushCategoryQuery.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				0552FDF421366D2D00A61CC5 /* DataTypes */,
 				05005A3C2136188D00B1BB1B /* BytePush.h */,
 				055BA33C213DF9F700D71598 /* WordPressURL.swift */,
+				055BA342213DFE9400D71598 /* BytePushUtilities.swift */,
 				05005A3D2136188D00B1BB1B /* Info.plist */,
 			);
 			path = BytePush;
@@ -274,6 +277,7 @@
 				05005A58213625C500B1BB1B /* BytePushUser.swift in Sources */,
 				05A84C5B213B67F600A20C94 /* BytePushCategoryQuery.swift in Sources */,
 				0552FDEB21365E2C00A61CC5 /* BytePushPage.swift in Sources */,
+				055BA343213DFE9400D71598 /* BytePushUtilities.swift in Sources */,
 				05A84C57213B4DC500A20C94 /* BytePushPostQuery.swift in Sources */,
 				05A84C63213B742B00A20C94 /* BytePushMediaQuery.swift in Sources */,
 				0552FDEF2136610D00A61CC5 /* BytePushComment.swift in Sources */,
