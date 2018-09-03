@@ -26,9 +26,10 @@ public enum Order: String, Codable {
     case descending = "desc"
 }
 
-protocol WordPressQuery: Encodable {
+public protocol WordPressQuery: Encodable {
     associatedtype BytePushDataType
-    var queryURL: URL { get set }
+    var wpEndpointURL: URL { get set }
+    init(withEndpointURL wpEndpointURL: URL)
     func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressQueryResult<BytePushDataType>) -> Void)
 }
 
@@ -55,5 +56,11 @@ extension WordPressQuery {
                 return URLQueryItem(name: $0.key, value: "\($0.value)")
             }
         }
+    }
+    
+    public var queryURL: URL? {
+        var components = URLComponents(url: wpEndpointURL, resolvingAgainstBaseURL: false)
+        components?.queryItems = queryItems
+        return components?.url
     }
 }
