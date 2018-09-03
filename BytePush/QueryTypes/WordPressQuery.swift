@@ -36,9 +36,7 @@ public protocol WordPressQuery: Encodable {
 extension WordPressQuery {
     var queryItems: [URLQueryItem]? {
         let encoder = JSONEncoder()
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        let dateFormatter = BytePushUtilities.wpDateFormatter
         encoder.dateEncodingStrategy = .formatted(dateFormatter)
         guard
             let json = try? encoder.encode(self),

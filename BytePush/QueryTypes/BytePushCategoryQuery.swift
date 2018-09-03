@@ -69,9 +69,7 @@ public struct BytePushCategoryQuery: WordPressQuery {
             if let data = data {
                 do {
                     let decoder = JSONDecoder()
-                    let dateFormatter = DateFormatter()
-                    dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-                    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+                    let dateFormatter = BytePushUtilities.wpDateFormatter
                     decoder.dateDecodingStrategy = .formatted(dateFormatter)
                     let requestResult = try decoder.decode([BytePushCategory].self, from: data)
                     result(.success(requestResult))
