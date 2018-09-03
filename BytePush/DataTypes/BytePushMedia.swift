@@ -9,71 +9,71 @@
 import Foundation
 
 public struct BytePushMedia: Codable {
-    enum MediaType: String, Codable {
+    public enum MediaType: String, Codable {
         case image, file
     }
-    struct MediaDetails: Codable {
-        struct MediaSize: Codable {
-            let file: String
-            let width: Int
-            let height: Int
-            let mimeType: String
-            let sourceURL: URL
+    public struct MediaDetails: Codable {
+        public struct MediaSize: Codable {
+            public let file: String
+            public let width: Int
+            public let height: Int
+            public let mimeType: String
+            public let sourceURL: URL
             
-            enum CodingKeys: String, CodingKey {
+            private enum CodingKeys: String, CodingKey {
                 case file, width, height
                 case mimeType = "mime_type"
                 case sourceURL = "source_url"
             }
         }
         
-        let width: Int
-        let height: Int
-        let file: URL
-        let sizes: [String:MediaSize]
+        public let width: Int
+        public let height: Int
+        public let file: URL
+        public let sizes: [String:MediaSize]
     }
     /// The date the object was published, as GMT.
-    let date: Date
+    public let date: Date
     /// The globally unique identifier for the object.
-    let guid: Rendered
+    public let guid: Rendered
     /// Unique identifier for the object.
-    let id: Int
+    public let id: Int
     /// URL to the object.
-    let link: URL
+    public let link: URL
     /// The date the object was last modified, as GMT.
-    let modified: Date
+    public let modified: Date
     /// An alphanumeric identifier for the object unique to its type.
-    let slug: String
+    public let slug: String
     /// A named status for the object.
-    let status: Status
+    public let status: Status
     /// Type of Post for the object.
-    let type: String
+    public let type: String
     /// The title for the object.
-    let title: Rendered
+    public let title: Rendered
     /// The ID for the author of the object.
-    let author: Int
+    public let author: Int
     /// Whether or not comments are open on the object.
-    let commentStatus: AllowedStatus
+    public let commentStatus: AllowedStatus
     /// Whether or not the object can be pinged.
-    let pingStatus: AllowedStatus
+    public let pingStatus: AllowedStatus
     /// The theme file to use to display the object.
-    let template: String
+    public let template: String
     /// Alternative text to display when attachment is not displayed.
-    let altText: String
+    public let altText: String
     /// The attachment caption.
-    let caption: Rendered
+    public let caption: Rendered
     /// The attachment description.
-    let description: Rendered
+    public let description: Rendered
     /// Attachment type.
-    let mediaType: String
+    public let mediaType: String
     /// The attachment MIME type.
-    let mimeType: String
+    public let mimeType: String
     /// Details about the media file, specific to its type.
-    let mediaDetails: MediaDetails
+    public let mediaDetails: MediaDetails
     /// The ID for the associated post of the attachment.
-    let post: Int?
+    public let post: Int?
     /// URL to the original attachment file.
-    let sourceURL: URL
+    public let sourceURL: URL
     
     private enum CodingKeys: String, CodingKey {
         case guid, id, link, slug, status, type, title, author, template

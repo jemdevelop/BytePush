@@ -10,29 +10,29 @@ import Foundation
 
 public struct BytePushComment: Codable {
     /// Unique identifier for the object.
-    let id: Int
+    public let id: Int
     /// The ID of the user object, if author was a user; otherwise, 0.
-    let author: Int
+    public let author: Int
     /// Display name for the object author.
-    let authorName: String
+    public let authorName: String
     /// URL for the object author.
-    let authorURL: URL?
+    public let authorURL: URL?
     /// The content for the object.
-    let content: Rendered
+    public let content: Rendered
     /// The date the object was published, as GMT.
-    let date: Date
+    public let date: Date
     /// URL to the object.
-    let link: URL
+    public let link: URL
     /// The ID for the parent of the object.
-    let parent: Int
+    public let parent: Int
     /// The ID of the associated post object.
-    let post: Int
+    public let post: Int
     /// State of the object.
-    let status: String
+    public let status: String
     /// Type of Comment for the object.
-    let type: String
+    public let type: String
     /// Avatar URLs for the object author.
-    let authorAvatarURLs: [String:URL]
+    public let authorAvatarURLs: [String:URL]
     
     private enum CodingKeys: String, CodingKey {
         case id, author, content, link, parent, post, status, type

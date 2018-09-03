@@ -10,17 +10,17 @@ import Foundation
 
 public struct BytePushUser: Codable {
     /// Unique identifier for the user.
-    let id: Int
+    public let id: Int
     /// Display name for the user.
-    let name: String
+    public let name: String
     /// URL of the user.
-    let url: String
+    public let url: String
     /// Description of the user.
-    let description: String?
+    public let description: String?
     /// Author URL of the user.
-    let link: URL
+    public let link: URL
     /// Avatar URLs for the user.
-    let avatarURLs: [String:URL]
+    public let avatarURLs: [String:URL]
     
     private enum CodingKeys: String, CodingKey {
         case id, name, url, description, link

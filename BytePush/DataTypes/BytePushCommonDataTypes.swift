@@ -13,10 +13,10 @@ public enum Taxonomy: String, Codable {
 }
 
 public struct Rendered: Codable {
-    let rendered: String
+    public let rendered: String
 }
 
-enum Status: String, Codable {
+public enum Status: String, Codable {
     case publish = "publish"
     case future = "future"
     case draft = "draft"
@@ -25,12 +25,12 @@ enum Status: String, Codable {
     case inherit = "inherit"
 }
 
-enum AllowedStatus: String, Codable {
+public enum AllowedStatus: String, Codable {
     case open
     case closed
 }
 
-struct PostText: Codable {
-    let rendered: String
-    let protected: Bool
+public struct PostText: Codable {
+    public let rendered: String
+    public let protected: Bool
 }

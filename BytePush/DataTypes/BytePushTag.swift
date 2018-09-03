@@ -10,17 +10,17 @@ import Foundation
 
 public struct BytePushTag: Codable {
     /// Unique identifier for the term.
-    let id: Int
+    public let id: Int
     /// Number of published posts for the term.
-    let count: Int
+    public let count: Int
     /// HTML description of the term.
-    let description: String
+    public let description: String
     /// URL of the term.
-    let link: URL
+    public let link: URL
     /// HTML title for the term.
-    let name: String
+    public let name: String
     /// An alphanumeric identifier for the term unique to its type.
-    let slug: String
+    public let slug: String
     /// Type attribution for the term.
-    let taxonomy: Taxonomy
+    public let taxonomy: Taxonomy
 }

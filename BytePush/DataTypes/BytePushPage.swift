@@ -10,39 +10,39 @@ import Foundation
 
 public struct BytePushPage: Codable {
     /// The date the object was published, as GMT.
-    let date: Date
+    public let date: Date
     /// The globally unique identifier for the object.
-    let guid: Rendered
+    public let guid: Rendered
     /// Unique identifier for the object.
-    let id: Int
+    public let id: Int
     /// URL to the object.
-    let link: URL
+    public let link: URL
     /// The date the object was last modified, as GMT.
-    let modified: Date
+    public let modified: Date
     /// An alphanumeric identifier for the object unique to its type.
-    let slug: String
+    public let slug: String
     /// A named status for the object.
-    let status: Status
+    public let status: Status
     /// Type of Post for the object.
-    let type: String
+    public let type: String
     /// The title for the object.
-    let title: Rendered
+    public let title: Rendered
     /// The content for the object.
-    let content: PostText
+    public let content: PostText
     /// The ID for the author of the object.
-    let author: Int
+    public let author: Int
     /// The excerpt for the object.
-    let excerpt: PostText
+    public let excerpt: PostText
     /// The ID of the featured media for the object.
-    let featuredMedia: Int
+    public let featuredMedia: Int
     /// Whether or not comments are open on the object.
-    let commentStatus: AllowedStatus
+    public let commentStatus: AllowedStatus
     /// Whether or not the object can be pinged.
-    let pingStatus: AllowedStatus
+    public let pingStatus: AllowedStatus
     /// The order of the object in relation to other object of its type.
-    let menuOrder: Int
+    public let menuOrder: Int
     /// The theme file to use to display the object.
-    let template: String
+    public let template: String
     
     private enum CodingKeys: String, CodingKey {
         case id, link, slug, status, type, title, content, author, excerpt, template
