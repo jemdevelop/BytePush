@@ -10,7 +10,6 @@
 		05005A432136188D00B1BB1B /* BytePush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05005A392136188D00B1BB1B /* BytePush.framework */; };
 		05005A482136188D00B1BB1B /* BytePushTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05005A472136188D00B1BB1B /* BytePushTests.swift */; };
 		05005A4A2136188E00B1BB1B /* BytePush.h in Headers */ = {isa = PBXBuildFile; fileRef = 05005A3C2136188D00B1BB1B /* BytePush.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05005A542136191A00B1BB1B /* BytePushAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05005A532136191A00B1BB1B /* BytePushAPI.swift */; };
 		05005A5621361A8B00B1BB1B /* BytePushPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05005A5521361A8B00B1BB1B /* BytePushPost.swift */; };
 		05005A58213625C500B1BB1B /* BytePushUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05005A57213625C500B1BB1B /* BytePushUser.swift */; };
 		0552FDE72136562100A61CC5 /* BytePushCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FDE62136562100A61CC5 /* BytePushCategory.swift */; };
@@ -46,7 +45,6 @@
 		05005A422136188D00B1BB1B /* BytePushTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BytePushTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05005A472136188D00B1BB1B /* BytePushTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushTests.swift; sourceTree = "<group>"; };
 		05005A492136188E00B1BB1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05005A532136191A00B1BB1B /* BytePushAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushAPI.swift; sourceTree = "<group>"; };
 		05005A5521361A8B00B1BB1B /* BytePushPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPost.swift; sourceTree = "<group>"; };
 		05005A57213625C500B1BB1B /* BytePushUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushUser.swift; sourceTree = "<group>"; };
 		0552FDE62136562100A61CC5 /* BytePushCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushCategory.swift; sourceTree = "<group>"; };
@@ -105,11 +103,9 @@
 		05005A3B2136188D00B1BB1B /* BytePush */ = {
 			isa = PBXGroup;
 			children = (
-				05F3A2AA213CBC4E005F8642 /* Authentication */,
 				05A84C51213B470100A20C94 /* QueryTypes */,
 				0552FDF421366D2D00A61CC5 /* DataTypes */,
 				05005A3C2136188D00B1BB1B /* BytePush.h */,
-				05005A532136191A00B1BB1B /* BytePushAPI.swift */,
 				05005A3D2136188D00B1BB1B /* Info.plist */,
 			);
 			path = BytePush;
@@ -152,13 +148,6 @@
 				05A84C5E213B6F0800A20C94 /* BytePushPageQuery.swift */,
 			);
 			path = QueryTypes;
-			sourceTree = "<group>";
-		};
-		05F3A2AA213CBC4E005F8642 /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05005A542136191A00B1BB1B /* BytePushAPI.swift in Sources */,
 				05A84C65213B774700A20C94 /* BytePushUserQuery.swift in Sources */,
 				05A84C5D213B6B7600A20C94 /* BytePushTagQuery.swift in Sources */,
 				05A84C61213B70E900A20C94 /* BytePushCommentQuery.swift in Sources */,
