@@ -15,7 +15,7 @@ public struct BytePushMediaQuery: WordPressQuery {
     enum MediaType: String, Codable {
         case image, video, audio, application
     }
-    var queryURL: URL
+    public var wpEndpointURL: URL
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?
     /// Current page of the collection.
@@ -65,12 +65,12 @@ public struct BytePushMediaQuery: WordPressQuery {
         case mimeType = "mime_type"
     }
     
-    init(queryURL: URL) {
-        self.queryURL = queryURL
+    public init(withEndpointURL wpEndpointURL: URL) {
+        self.wpEndpointURL = wpEndpointURL
     }
     
-    func execute(withAuthenticationItem authenticationItem: URLQueryItem? = nil, result: @escaping (WordPressQueryResult<BytePushMedia>) -> Void) {
-        guard var components = URLComponents(url: queryURL, resolvingAgainstBaseURL: false) else {
+    public func execute(withAuthenticationItem authenticationItem: URLQueryItem? = nil, result: @escaping (WordPressQueryResult<BytePushMedia>) -> Void) {
+        guard var components = URLComponents(url: wpEndpointURL, resolvingAgainstBaseURL: false) else {
             result(.failure(WordPressQueryError.couldNotConstructURL))
             return
         }

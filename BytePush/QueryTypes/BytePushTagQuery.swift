@@ -13,7 +13,7 @@ public struct BytePushTagQuery: WordPressQuery {
         case id, include, name, slug, description, count
         case termGroup = "term_group"
     }
-    var queryURL: URL
+    public var wpEndpointURL: URL
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?
     /// Current page of the collection.
@@ -39,19 +39,19 @@ public struct BytePushTagQuery: WordPressQuery {
     /// Limit result set to terms with one or more specific slugs.
     var slug: [String]?
     
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case context, page, search, exclude, include, offset, order, orderby
         case post, slug
         case perPage = "per_page"
         case hideEmpty = "hide_empty"
     }
     
-    init(queryURL: URL) {
-        self.queryURL = queryURL
+    public init(withEndpointURL wpEndpointURL: URL) {
+        self.wpEndpointURL = wpEndpointURL
     }
     
-    func execute(withAuthenticationItem authenticationItem: URLQueryItem? = nil, result: @escaping (WordPressQueryResult<BytePushTag>) -> Void) {
-        guard var components = URLComponents(url: queryURL, resolvingAgainstBaseURL: false) else {
+    public func execute(withAuthenticationItem authenticationItem: URLQueryItem? = nil, result: @escaping (WordPressQueryResult<BytePushTag>) -> Void) {
+        guard var components = URLComponents(url: wpEndpointURL, resolvingAgainstBaseURL: false) else {
             result(.failure(WordPressQueryError.couldNotConstructURL))
             return
         }

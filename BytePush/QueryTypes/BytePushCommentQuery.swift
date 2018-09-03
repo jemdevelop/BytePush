@@ -13,7 +13,7 @@ public struct BytePushCommentQuery: WordPressQuery {
         case date, id, include, post, parent, type
         case dateGMT = "date_gmt"
     }
-    var queryURL: URL
+    public var wpEndpointURL: URL
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?
     /// Current page of the collection.
@@ -64,12 +64,12 @@ public struct BytePushCommentQuery: WordPressQuery {
         case parentExclude = "parent_exclude"
     }
     
-    init(queryURL: URL) {
-        self.queryURL = queryURL
+    public init(withEndpointURL wpEndpointURL: URL) {
+        self.wpEndpointURL = wpEndpointURL
     }
     
-    func execute(withAuthenticationItem authenticationItem: URLQueryItem? = nil, result: @escaping (WordPressQueryResult<BytePushComment>) -> Void) {
-        guard var components = URLComponents(url: queryURL, resolvingAgainstBaseURL: false) else {
+    public func execute(withAuthenticationItem authenticationItem: URLQueryItem? = nil, result: @escaping (WordPressQueryResult<BytePushComment>) -> Void) {
+        guard var components = URLComponents(url: wpEndpointURL, resolvingAgainstBaseURL: false) else {
             result(.failure(WordPressQueryError.couldNotConstructURL))
             return
         }
