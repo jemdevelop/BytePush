@@ -25,7 +25,7 @@ public struct BytePushPost: Codable {
     /// The date the object was published, as GMT.
     public let date: Date
     /// The globally unique identifier for the object.
-    public let guid: Rendered
+    public let guid: WPRendered
     /// Unique identifier for the object.
     public let id: Int
     /// URL to the object.
@@ -35,23 +35,23 @@ public struct BytePushPost: Codable {
     /// An alphanumeric identifier for the object unique to its type.
     public let slug: String
     /// A named status for the object.
-    public let status: Status
+    public let status: WPStatus
     /// Type of Post for the object.
     public let type: String
     /// The title for the object.
-    public let title: Rendered
+    public let title: WPRendered
     /// The content for the object.
-    public let content: PostText
+    public let content: WPPostText
     /// The ID for the author of the object.
     public let author: Int
     /// The excerpt for the object.
-    public let excerpt: PostText
+    public let excerpt: WPPostText
     /// The ID of the featured media for the object.
     public let featuredMedia: Int
     /// Whether or not comments are open on the object.
-    public let commentStatus: AllowedStatus
+    public let commentStatus: WPAllowedStatus
     /// Whether or not the object can be pinged.
-    public let pingStatus: AllowedStatus
+    public let pingStatus: WPAllowedStatus
     /// The format for the object.
     public let format: Format
     /// Whether or not the object should be treated as sticky.

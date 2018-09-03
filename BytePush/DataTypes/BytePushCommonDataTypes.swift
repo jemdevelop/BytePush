@@ -8,15 +8,15 @@
 
 import Foundation
 
-public enum Taxonomy: String, Codable {
+public enum WPTaxonomy: String, Codable {
     case category, post_tag, nav_menu, link_category, post_format
 }
 
-public struct Rendered: Codable {
+public struct WPRendered: Codable {
     public let rendered: String
 }
 
-public enum Status: String, Codable {
+public enum WPStatus: String, Codable {
     case publish = "publish"
     case future = "future"
     case draft = "draft"
@@ -25,12 +25,12 @@ public enum Status: String, Codable {
     case inherit = "inherit"
 }
 
-public enum AllowedStatus: String, Codable {
+public enum WPAllowedStatus: String, Codable {
     case open
     case closed
 }
 
-public struct PostText: Codable {
+public struct WPPostText: Codable {
     public let rendered: String
     public let protected: Bool
 }

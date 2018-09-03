@@ -22,7 +22,7 @@ public struct BytePushCategory: Codable {
     /// An alphanumeric identifier for the term unique to its type.
     public let slug: String
     /// Type attribution for the term.
-    public let taxonomy: Taxonomy
+    public let taxonomy: WPTaxonomy
     /// The parent term ID.
     public let parent: Int
 }

@@ -35,7 +35,7 @@ public struct BytePushMedia: Codable {
     /// The date the object was published, as GMT.
     public let date: Date
     /// The globally unique identifier for the object.
-    public let guid: Rendered
+    public let guid: WPRendered
     /// Unique identifier for the object.
     public let id: Int
     /// URL to the object.
@@ -45,25 +45,25 @@ public struct BytePushMedia: Codable {
     /// An alphanumeric identifier for the object unique to its type.
     public let slug: String
     /// A named status for the object.
-    public let status: Status
+    public let status: WPStatus
     /// Type of Post for the object.
     public let type: String
     /// The title for the object.
-    public let title: Rendered
+    public let title: WPRendered
     /// The ID for the author of the object.
     public let author: Int
     /// Whether or not comments are open on the object.
-    public let commentStatus: AllowedStatus
+    public let commentStatus: WPAllowedStatus
     /// Whether or not the object can be pinged.
-    public let pingStatus: AllowedStatus
+    public let pingStatus: WPAllowedStatus
     /// The theme file to use to display the object.
     public let template: String
     /// Alternative text to display when attachment is not displayed.
     public let altText: String
     /// The attachment caption.
-    public let caption: Rendered
+    public let caption: WPRendered
     /// The attachment description.
-    public let description: Rendered
+    public let description: WPRendered
     /// Attachment type.
     public let mediaType: String
     /// The attachment MIME type.
