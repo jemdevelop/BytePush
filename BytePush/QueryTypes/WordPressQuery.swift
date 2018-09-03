@@ -17,6 +17,15 @@ enum WordPressQueryError: Error {
     case couldNotConstructURL
 }
 
+enum Context: String, Codable {
+    case view, embed, edit
+}
+
+enum Order: String, Codable {
+    case ascending = "asc"
+    case descending = "desc"
+}
+
 protocol WordPressQuery: Encodable {
     associatedtype BytePushDataType
     var queryURL: URL { get set }
