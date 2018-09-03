@@ -105,6 +105,7 @@
 		05005A3B2136188D00B1BB1B /* BytePush */ = {
 			isa = PBXGroup;
 			children = (
+				05F3A2AA213CBC4E005F8642 /* Authentication */,
 				05A84C51213B470100A20C94 /* QueryTypes */,
 				0552FDF421366D2D00A61CC5 /* DataTypes */,
 				05005A3C2136188D00B1BB1B /* BytePush.h */,
@@ -151,6 +152,13 @@
 				05A84C5E213B6F0800A20C94 /* BytePushPageQuery.swift */,
 			);
 			path = QueryTypes;
+			sourceTree = "<group>";
+		};
+		05F3A2AA213CBC4E005F8642 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

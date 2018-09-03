@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BytePushCommentQuery: WordPressQuery {
+public struct BytePushCommentQuery: WordPressQuery {
     enum Orderby: String, Codable {
         case date, id, include, post, parent, type
         case dateGMT = "date_gmt"

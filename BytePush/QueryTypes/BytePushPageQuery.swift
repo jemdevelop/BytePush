@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BytePushPageQuery: WordPressQuery {
+public struct BytePushPageQuery: WordPressQuery {
     enum OrderBy: String, Codable {
         case author, date, id, include, modified, parent, relevance
         case slug, title

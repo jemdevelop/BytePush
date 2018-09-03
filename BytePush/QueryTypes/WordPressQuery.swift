@@ -8,25 +8,25 @@
 
 import Foundation
 
-enum WordPressQueryResult<BytePushDataType> {
+public enum WordPressQueryResult<BytePushDataType> {
     case success([BytePushDataType])
     case failure(Error)
 }
 
-enum WordPressQueryError: Error {
+public enum WordPressQueryError: Error {
     case couldNotConstructURL
 }
 
-enum Context: String, Codable {
+public enum Context: String, Codable {
     case view, embed, edit
 }
 
-enum Order: String, Codable {
+public enum Order: String, Codable {
     case ascending = "asc"
     case descending = "desc"
 }
 
-protocol WordPressQuery: Encodable {
+public protocol WordPressQuery: Encodable {
     associatedtype BytePushDataType
     var queryURL: URL { get set }
     func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressQueryResult<BytePushDataType>) -> Void)

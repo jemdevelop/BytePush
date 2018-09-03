@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BytePushTagQuery: WordPressQuery {
+public struct BytePushTagQuery: WordPressQuery {
     enum OrderBy: String, Codable {
         case id, include, name, slug, description, count
         case termGroup = "term_group"
