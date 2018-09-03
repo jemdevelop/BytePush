@@ -30,7 +30,7 @@ public class BytePushAPI {
     var adminPage: URL {
         return URL(string: "wp-admin/admin.php", relativeTo: hostURL)!
     }
-    var hostURLComponents: URLComponents {
+    private var hostURLComponents: URLComponents {
         return URLComponents(url: hostURL, resolvingAgainstBaseURL: false)!
     }
     
@@ -42,9 +42,23 @@ public class BytePushAPI {
         var urlComponents = hostURLComponents
         urlComponents.path = baseRoute + WordPressEndpoint.posts.rawValue
         guard let url = urlComponents.url else {
+            result(.failure(WordPressQueryError.couldNotConstructURL))
             return
         }
         var query = BytePushPostQuery(queryURL: url)
+        query.page = page
+        query.perPage = perPage
+        query.execute(result: result)
+    }
+    
+    func getCommentPage(_ page: Int, postsPerPage perPage: Int? = nil, result: @escaping (WordPressQueryResult<BytePushComment>) -> Void) {
+        var urlComponents = hostURLComponents
+        urlComponents.path = baseRoute + WordPressEndpoint.comments.rawValue
+        guard let url = urlComponents.url else {
+            result(.failure(WordPressQueryError.couldNotConstructURL))
+            return
+        }
+        var query = BytePushCommentQuery(queryURL: url)
         query.page = page
         query.perPage = perPage
         query.execute(result: result)
