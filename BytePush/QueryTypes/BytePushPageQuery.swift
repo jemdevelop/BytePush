@@ -84,9 +84,7 @@ public struct BytePushPageQuery: WordPressQuery {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let data = data {
                 do {
-                    let decoder = JSONDecoder()
-                    let dateFormatter = BytePushUtilities.wpDateFormatter
-                    decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                    let decoder = BytePushUtilities.wpJSONDecoder
                     let requestResult = try decoder.decode([BytePushPage].self, from: data)
                     result(.success(requestResult))
                 } catch let err {
