@@ -10,45 +10,48 @@ import Foundation
 
 public struct BytePushPage: Codable {
     /// The date the object was published, as GMT.
-    public let date: Date
+    public let date: Date?
     /// The globally unique identifier for the object.
-    public let guid: WPRendered
+    public let guid: WPContainer?
     /// Unique identifier for the object.
-    public let id: Int
+    public let id: Int?
     /// URL to the object.
-    public let link: URL
+    public let link: URL?
     /// The date the object was last modified, as GMT.
-    public let modified: Date
+    public let modified: Date?
     /// An alphanumeric identifier for the object unique to its type.
-    public let slug: String
+    public let slug: String?
     /// A named status for the object.
-    public let status: WPStatus
+    public let status: WPStatus?
     /// Type of Post for the object.
-    public let type: String
+    public let type: String?
+    /// A password to protect access to the content and excerpt.
+    public let password: String?
+    /// The ID for the parent of the object.
+    public let parent: Int?
     /// The title for the object.
-    public let title: WPRendered
+    public let title: WPContainer?
     /// The content for the object.
-    public let content: WPPostText
+    public let content: WPContent?
     /// The ID for the author of the object.
-    public let author: Int
+    public let author: Int?
     /// The excerpt for the object.
-    public let excerpt: WPPostText
+    public let excerpt: WPContent?
     /// The ID of the featured media for the object.
-    public let featuredMedia: Int
+    public let featuredMedia: Int?
     /// Whether or not comments are open on the object.
-    public let commentStatus: WPAllowedStatus
+    public let commentStatus: WPAllowedStatus?
     /// Whether or not the object can be pinged.
-    public let pingStatus: WPAllowedStatus
+    public let pingStatus: WPAllowedStatus?
     /// The order of the object in relation to other object of its type.
-    public let menuOrder: Int
+    public let menuOrder: Int?
     /// The theme file to use to display the object.
-    public let template: String
+    public let template: String?
     
     private enum CodingKeys: String, CodingKey {
-        case id, link, slug, status, type, title, content, author, excerpt, template
-        case date = "date_gmt"
+        case date, id, modified, link, slug, status, type, password, parent
+        case title, content, author, excerpt, template
         case guid = "guid"
-        case modified = "modified_gmt"
         case featuredMedia = "featured_media"
         case commentStatus = "comment_status"
         case pingStatus = "ping_status"

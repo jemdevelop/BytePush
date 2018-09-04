@@ -23,52 +23,52 @@ public struct BytePushPost: Codable {
     }
     
     /// The date the object was published, as GMT.
-    public let date: Date
+    public let date: Date?
     /// The globally unique identifier for the object.
-    public let guid: WPRendered
+    public let guid: WPContainer?
     /// Unique identifier for the object.
-    public let id: Int
+    public let id: Int?
     /// URL to the object.
-    public let link: URL
+    public let link: URL?
     /// The date the object was last modified, as GMT.
-    public let modified: Date
+    public let modified: Date?
     /// An alphanumeric identifier for the object unique to its type.
-    public let slug: String
+    public let slug: String?
     /// A named status for the object.
-    public let status: WPStatus
+    public let status: WPStatus?
     /// Type of Post for the object.
-    public let type: String
+    public let type: String?
+    /// A password to protect access to the content and excerpt.
+    public let password: String?
     /// The title for the object.
-    public let title: WPRendered
+    public let title: WPContainer?
     /// The content for the object.
-    public let content: WPPostText
+    public let content: WPContent?
     /// The ID for the author of the object.
-    public let author: Int
+    public let author: Int?
     /// The excerpt for the object.
-    public let excerpt: WPPostText
+    public let excerpt: WPContent?
     /// The ID of the featured media for the object.
-    public let featuredMedia: Int
+    public let featuredMedia: Int?
     /// Whether or not comments are open on the object.
-    public let commentStatus: WPAllowedStatus
+    public let commentStatus: WPAllowedStatus?
     /// Whether or not the object can be pinged.
-    public let pingStatus: WPAllowedStatus
+    public let pingStatus: WPAllowedStatus?
     /// The format for the object.
-    public let format: Format
+    public let format: Format?
     /// Whether or not the object should be treated as sticky.
-    public let sticky: Bool
+    public let sticky: Bool?
     /// The theme file to use to display the object.
-    public let template: String
+    public let template: String?
     /// The terms assigned to the object in the category taxonomy.
-    public let categories: [Int]
+    public let categories: [Int]?
     /// The terms assigned to the object in the post_tag taxonomy.
-    public let tags: [Int]
+    public let tags: [Int]?
     
     private enum CodingKeys: String, CodingKey {
-        case id, link, slug, status, type, title, content, author, excerpt
-        case format, sticky, template, categories, tags
-        case date = "date_gmt"
+        case date, id, link, modified, slug, status, type, password, title
+        case content, author, excerpt, format, sticky, template, categories, tags
         case guid = "guid"
-        case modified = "modified_gmt"
         case featuredMedia = "featured_media"
         case commentStatus = "comment_status"
         case pingStatus = "ping_status"

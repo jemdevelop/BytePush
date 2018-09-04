@@ -33,53 +33,51 @@ public struct BytePushMedia: Codable {
         public let sizes: [String:MediaSize]
     }
     /// The date the object was published, as GMT.
-    public let date: Date
+    public let date: Date?
     /// The globally unique identifier for the object.
-    public let guid: WPRendered
+    public let guid: WPContainer?
     /// Unique identifier for the object.
-    public let id: Int
+    public let id: Int?
     /// URL to the object.
-    public let link: URL
+    public let link: URL?
     /// The date the object was last modified, as GMT.
-    public let modified: Date
+    public let modified: Date?
     /// An alphanumeric identifier for the object unique to its type.
-    public let slug: String
+    public let slug: String?
     /// A named status for the object.
-    public let status: WPStatus
+    public let status: WPStatus?
     /// Type of Post for the object.
-    public let type: String
+    public let type: String?
     /// The title for the object.
-    public let title: WPRendered
+    public let title: WPContainer?
     /// The ID for the author of the object.
-    public let author: Int
+    public let author: Int?
     /// Whether or not comments are open on the object.
-    public let commentStatus: WPAllowedStatus
+    public let commentStatus: WPAllowedStatus?
     /// Whether or not the object can be pinged.
-    public let pingStatus: WPAllowedStatus
+    public let pingStatus: WPAllowedStatus?
     /// The theme file to use to display the object.
-    public let template: String
+    public let template: String?
     /// Alternative text to display when attachment is not displayed.
-    public let altText: String
+    public let altText: String?
     /// The attachment caption.
-    public let caption: WPRendered
+    public let caption: WPContainer?
     /// The attachment description.
-    public let description: WPRendered
+    public let description: WPContainer?
     /// Attachment type.
-    public let mediaType: String
+    public let mediaType: String?
     /// The attachment MIME type.
-    public let mimeType: String
+    public let mimeType: String?
     /// Details about the media file, specific to its type.
-    public let mediaDetails: MediaDetails
+    public let mediaDetails: MediaDetails?
     /// The ID for the associated post of the attachment.
     public let post: Int?
     /// URL to the original attachment file.
-    public let sourceURL: URL
+    public let sourceURL: URL?
     
     private enum CodingKeys: String, CodingKey {
-        case guid, id, link, slug, status, type, title, author, template
-        case caption, description, post
-        case date = "date_gmt"
-        case modified = "modified_gmt"
+        case date, guid, id, link, modified, slug, status, type, title
+        case author, template, caption, description, post
         case commentStatus = "comment_status"
         case pingStatus = "ping_status"
         case altText = "alt_text"

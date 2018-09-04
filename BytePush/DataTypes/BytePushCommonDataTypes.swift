@@ -12,8 +12,9 @@ public enum WPTaxonomy: String, Codable {
     case category, post_tag, nav_menu, link_category, post_format
 }
 
-public struct WPRendered: Codable {
+public struct WPContainer: Codable {
     public let rendered: String
+    public let raw: String?
 }
 
 public enum WPStatus: String, Codable {
@@ -30,7 +31,8 @@ public enum WPAllowedStatus: String, Codable {
     case closed
 }
 
-public struct WPPostText: Codable {
+public struct WPContent: Codable {
     public let rendered: String
+    public let raw: String?
     public let protected: Bool
 }
