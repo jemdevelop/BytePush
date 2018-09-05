@@ -34,6 +34,7 @@ public protocol WordPressQuery: Encodable {
 }
 
 extension WordPressQuery {
+    /// An array of query items representing the query.
     var queryItems: [URLQueryItem]? {
         let encoder = JSONEncoder()
         let dateFormatter = BytePushUtilities.wpDateFormatter
@@ -56,6 +57,7 @@ extension WordPressQuery {
         }
     }
     
+    /// The complete URL for the query.
     public var queryURL: URL? {
         var components = URLComponents(url: wpEndpointURL, resolvingAgainstBaseURL: false)
         components?.queryItems = queryItems
