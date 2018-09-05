@@ -23,8 +23,10 @@ public struct BytePushComment: Codable {
     public let authorURL: URL?
     /// The content for the object.
     public let content: WPContainer?
-    /// The date the object was published, as GMT.
+    /// The date the object was published, in the site's timezone.
     public let date: Date?
+    /// The date the object was published, as GMT.
+    public let dateGMT: Date?
     /// URL to the object.
     public let link: URL?
     /// The ID for the parent of the object.
@@ -44,6 +46,7 @@ public struct BytePushComment: Codable {
         case authorIP = "author_ip"
         case authorName = "author_name"
         case authorURL = "author_url"
+        case dateGMT = "date_gmt"
         case authorAvatarURLs = "author_avatar_urls"
     }
 }

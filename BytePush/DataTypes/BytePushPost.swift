@@ -22,16 +22,20 @@ public struct BytePushPost: Codable {
         case audio
     }
     
-    /// The date the object was published, as GMT.
+    /// The date the object was published, in the site's timezone.
     public let date: Date?
+    /// The date the object was published, as GMT.
+    public let dateGMT: Date?
     /// The globally unique identifier for the object.
     public let guid: WPContainer?
     /// Unique identifier for the object.
     public let id: Int?
     /// URL to the object.
     public let link: URL?
-    /// The date the object was last modified, as GMT.
+    /// The date the object was published, in the site's timezone.
     public let modified: Date?
+    /// The date the object was last modified, as GMT.
+    public let modifiedGMT: Date?
     /// An alphanumeric identifier for the object unique to its type.
     public let slug: String?
     /// A named status for the object.
@@ -66,9 +70,10 @@ public struct BytePushPost: Codable {
     public let tags: [Int]?
     
     private enum CodingKeys: String, CodingKey {
-        case date, id, link, modified, slug, status, type, password, title
+        case date, guid, id, link, modified, slug, status, type, password, title
         case content, author, excerpt, format, sticky, template, categories, tags
-        case guid = "guid"
+        case dateGMT = "date_gmt"
+        case modifiedGMT = "modified_gmt"
         case featuredMedia = "featured_media"
         case commentStatus = "comment_status"
         case pingStatus = "ping_status"
