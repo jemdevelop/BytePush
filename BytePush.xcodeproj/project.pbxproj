@@ -30,6 +30,7 @@
 		05A84C65213B774700A20C94 /* BytePushUserQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84C64213B774700A20C94 /* BytePushUserQuery.swift */; };
 		05AD24642140AC16007F408B /* BytePushPostRevision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD24632140AC16007F408B /* BytePushPostRevision.swift */; };
 		05AD24662140AE6F007F408B /* BytePushPostStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD24652140AE6F007F408B /* BytePushPostStatus.swift */; };
+		05AD24682140B020007F408B /* BytePushPostStatusQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD24672140B020007F408B /* BytePushPostStatusQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		05A84C64213B774700A20C94 /* BytePushUserQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushUserQuery.swift; sourceTree = "<group>"; };
 		05AD24632140AC16007F408B /* BytePushPostRevision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BytePushPostRevision.swift; path = BytePush/DataTypes/BytePushPostRevision.swift; sourceTree = SOURCE_ROOT; };
 		05AD24652140AE6F007F408B /* BytePushPostStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPostStatus.swift; sourceTree = "<group>"; };
+		05AD24672140B020007F408B /* BytePushPostStatusQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPostStatusQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				05A84C5A213B67F600A20C94 /* BytePushCategoryQuery.swift */,
 				05A84C5C213B6B7600A20C94 /* BytePushTagQuery.swift */,
 				05A84C5E213B6F0800A20C94 /* BytePushPageQuery.swift */,
+				05AD24672140B020007F408B /* BytePushPostStatusQuery.swift */,
 			);
 			path = QueryTypes;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				05A84C63213B742B00A20C94 /* BytePushMediaQuery.swift in Sources */,
 				0552FDEF2136610D00A61CC5 /* BytePushComment.swift in Sources */,
 				05A84C59213B5AA000A20C94 /* WordPressQuery.swift in Sources */,
+				05AD24682140B020007F408B /* BytePushPostStatusQuery.swift in Sources */,
 				05AD24642140AC16007F408B /* BytePushPostRevision.swift in Sources */,
 				0552FDE72136562100A61CC5 /* BytePushCategory.swift in Sources */,
 			);
