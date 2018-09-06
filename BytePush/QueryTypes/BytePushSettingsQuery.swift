@@ -40,6 +40,6 @@ public struct BytePushSettingsQuery: WordPressQuery {
                     result(.failure(err))
                 }
             }
-            }.resume()
+        }.resume()
     }
 }
