@@ -9,35 +9,34 @@
 import Foundation
 
 public struct BytePushUserQuery: WordPressQuery {
-    
-    enum Orderby: String, Codable {
+    public enum Orderby: String, Codable {
         case id, include, name, slug, email, url
         case registeredDate = "registered_date"
     }
     /// The blog URL with complete path to the appropriate endpoint.
     public var wpEndpointURL: URL
     /// Scope under which the request is made; determines fields present in response.
-    var context: Context?
+    public var context: Context?
     /// Current page of the collection.
-    var page: Int?
+    public var page: Int?
     /// Maximum number of items to be returned in result set.
-    var perPage: Int?
+    public var perPage: Int?
     /// Limit results to those matching a string.
-    var search: String?
+    public var search: String?
     /// Ensure result set excludes specific IDs.
-    var exclude: [Int]?
+    public var exclude: [Int]?
     /// Limit result set to specific IDs.
-    var include: [Int]?
+    public var include: [Int]?
     /// Offset the result set by a specific number of items.
-    var offset: Int?
+    public var offset: Int?
     /// Order sort attribute ascending or descending.
-    var order: Order?
+    public var order: Order?
     /// Sort collection by object attribute.
-    var orderby: Orderby?
+    public var orderby: Orderby?
     /// Limit result set to users with one or more specific slugs.
-    var slug: [String]?
+    public var slug: [String]?
     /// Limit result set to users matching at least one specific role provided.
-    var roles: [String]?
+    public var roles: [String]?
     
     enum CodingKeys: String, CodingKey {
         case context, page, search, exclude, include, offset, order, orderby

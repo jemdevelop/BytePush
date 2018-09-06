@@ -9,36 +9,36 @@
 import Foundation
 
 public struct BytePushTagQuery: WordPressQuery {
-    enum OrderBy: String, Codable {
+    public enum OrderBy: String, Codable {
         case id, include, name, slug, description, count
         case termGroup = "term_group"
     }
     /// The blog URL with complete path to the appropriate endpoint.
     public var wpEndpointURL: URL
     /// Scope under which the request is made; determines fields present in response.
-    var context: Context?
+    public var context: Context?
     /// Current page of the collection.
-    var page: Int?
+    public var page: Int?
     /// Maximum number of items to be returned in result set.
-    var perPage: Int?
+    public var perPage: Int?
     /// Limit results to those matching a string.
-    var search: String?
+    public var search: String?
     /// Ensure result set excludes specific IDs.
-    var exclude: [Int]?
+    public var exclude: [Int]?
     /// Limit result set to specific IDs.
-    var include: [Int]?
+    public var include: [Int]?
     /// Offset the result set by a specific number of items.
-    var offset: Int?
+    public var offset: Int?
     /// Order sort attribute ascending or descending.
-    var order: Order?
+    public var order: Order?
     /// Sort collection by term attribute.
-    var orderby: OrderBy?
+    public var orderby: OrderBy?
     /// Whether to hide terms not assigned to any posts.
-    var hideEmpty: Bool?
+    public var hideEmpty: Bool?
     /// Limit result set to terms assigned to a specific post.
-    var post: Int?
+    public var post: Int?
     /// Limit result set to terms with one or more specific slugs.
-    var slug: [String]?
+    public var slug: [String]?
     
     private enum CodingKeys: String, CodingKey {
         case context, page, search, exclude, include, offset, order, orderby

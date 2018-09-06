@@ -9,52 +9,52 @@
 import Foundation
 
 public struct BytePushMediaQuery: WordPressQuery {
-    enum Orderby: String, Codable {
+    public enum Orderby: String, Codable {
         case author, date, id, include, modified, parent, relevance, slug, title
     }
-    enum MediaType: String, Codable {
+    public enum MediaType: String, Codable {
         case image, video, audio, application
     }
     /// The blog URL with complete path to the appropriate endpoint.
     public var wpEndpointURL: URL
     /// Scope under which the request is made; determines fields present in response.
-    var context: Context?
+    public var context: Context?
     /// Current page of the collection.
-    var page: Int?
+    public var page: Int?
     /// Maximum number of items to be returned in result set.
-    var perPage: Int?
+    public var perPage: Int?
     /// Limit results to those matching a string.
-    var search: String?
+    public var search: String?
     /// Limit response to posts published after a given date.
-    var after: Date?
+    public var after: Date?
     /// Limit result set to posts assigned to specific authors.
-    var author: [Int]?
+    public var author: [Int]?
     /// Ensure result set excludes posts assigned to specific authors.
-    var authorExclude: [Int]?
+    public var authorExclude: [Int]?
     /// Limit response to posts published before a given date.
-    var before: Date?
+    public var before: Date?
     /// Ensure result set excludes specific IDs.
-    var exclude: [Int]?
+    public var exclude: [Int]?
     /// Limit result set to specific IDs.
-    var include: [Int]?
+    public var include: [Int]?
     /// Offset the result set by a specific number of items.
-    var offset: Int?
+    public var offset: Int?
     /// Order sort attribute ascending or descending.
-    var order: Order?
+    public var order: Order?
     /// Sort collection by object attribute.
-    var orderby: Orderby?
+    public var orderby: Orderby?
     /// Limit result set to items with particular parent IDs.
-    var parent: [Int]?
+    public var parent: [Int]?
     /// Limit result set to all items except those of a particular parent ID.
-    var parentExclude: [Int]?
+    public var parentExclude: [Int]?
     /// Limit result set to posts with one or more specific slugs.
-    var slug: [String]?
+    public var slug: [String]?
     /// Limit result set to posts assigned one or more statuses.
-    var status: [String]?
+    public var status: [String]?
     /// Limit result set to attachments of a particular media type.
-    var mediaType: MediaType?
+    public var mediaType: MediaType?
     /// Limit result set to attachments of a particular MIME type.
-    var mimeType: String?
+    public var mimeType: String?
     
     enum CodingKeys: String, CodingKey {
         case context, page, search, after, author, before, exclude, include
