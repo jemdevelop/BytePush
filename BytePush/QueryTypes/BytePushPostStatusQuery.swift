@@ -10,6 +10,7 @@ import Foundation
 
 public struct BytePushPostStatusQuery {
     public var wpEndpointURL: URL
+    /// Scope under which the request is made; determines fields present in response.
     public var context: Context?
     
     public init(withEndpointURL wpEndpointURL: URL) {
