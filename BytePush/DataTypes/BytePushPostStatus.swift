@@ -8,6 +8,20 @@
 
 import Foundation
 
-struct BytePushPostStatus {
+struct BytePushPostStatus: Codable {
+    public let name: String?
+    public let privateStatus: Bool?
+    public let protectedStatus: Bool?
+    public let publicStatus: Bool?
+    public let queryable: Bool?
+    public let showInList: Bool?
+    public let slug: String?
     
+    private enum CodingKeys: String, CodingKey {
+        case name, queryable, slug
+        case privateStatus = "private"
+        case protectedStatus = "protected"
+        case publicStatus = "public"
+        case showInList = "show_in_list"
+    }
 }
