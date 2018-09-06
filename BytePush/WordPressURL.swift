@@ -19,6 +19,7 @@ public struct WordPressURL {
             case comments = "/wp/v2/comments"
             case media = "/wp/v2/media"
             case users = "/wp/v2/users"
+            case postStatuses = "/wp/v2/statuses"
         }
     }
     
@@ -65,6 +66,11 @@ public struct WordPressURL {
     /// The default users REST API URL for the blog.
     public var users: URL {
         let endpoint = Endpoints.restPath + Endpoints.RESTEndpoint.users.rawValue
+        return baseURL.appendingPathComponent(endpoint)
+    }
+    /// The default post statuses REST API URL for the blog.
+    public var postStatuses: URL {
+        let endpoint = Endpoints.restPath + Endpoints.RESTEndpoint.postStatuses.rawValue
         return baseURL.appendingPathComponent(endpoint)
     }
     
