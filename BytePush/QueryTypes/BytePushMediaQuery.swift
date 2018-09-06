@@ -15,6 +15,7 @@ public struct BytePushMediaQuery: WordPressQuery {
     enum MediaType: String, Codable {
         case image, video, audio, application
     }
+    /// The blog URL with complete path to the appropriate endpoint.
     public var wpEndpointURL: URL
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?

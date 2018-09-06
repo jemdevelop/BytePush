@@ -13,6 +13,7 @@ public struct BytePushCategoryQuery: WordPressQuery {
         case id, include, name, slug, description, count
         case termGroup = "term_group"
     }
+    /// The blog URL with complete path to the appropriate endpoint.
     public var wpEndpointURL: URL
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?

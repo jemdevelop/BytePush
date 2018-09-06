@@ -13,6 +13,7 @@ public struct BytePushCommentQuery: WordPressQuery {
         case date, id, include, post, parent, type
         case dateGMT = "date_gmt"
     }
+    /// The blog URL with complete path to the appropriate endpoint.
     public var wpEndpointURL: URL
     /// Scope under which the request is made; determines fields present in response.
     var context: Context?

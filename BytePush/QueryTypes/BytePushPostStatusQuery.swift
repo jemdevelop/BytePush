@@ -9,9 +9,11 @@
 import Foundation
 
 public struct BytePushPostStatusQuery: WordPressQuery {
+    /// The blog URL with complete path to the appropriate endpoint.
     public var wpEndpointURL: URL
     /// Scope under which the request is made; determines fields present in response.
     public var context: Context?
+    //public var status: String?
     
     public init(withEndpointURL wpEndpointURL: URL) {
         self.wpEndpointURL = wpEndpointURL
