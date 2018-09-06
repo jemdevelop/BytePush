@@ -31,6 +31,7 @@
 		05AD24642140AC16007F408B /* BytePushPostRevision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD24632140AC16007F408B /* BytePushPostRevision.swift */; };
 		05AD24662140AE6F007F408B /* BytePushPostStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD24652140AE6F007F408B /* BytePushPostStatus.swift */; };
 		05AD24682140B020007F408B /* BytePushPostStatusQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD24672140B020007F408B /* BytePushPostStatusQuery.swift */; };
+		05AD246A2140B2C6007F408B /* BytePushSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD24692140B2C6007F408B /* BytePushSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		05AD24632140AC16007F408B /* BytePushPostRevision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BytePushPostRevision.swift; path = BytePush/DataTypes/BytePushPostRevision.swift; sourceTree = SOURCE_ROOT; };
 		05AD24652140AE6F007F408B /* BytePushPostStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPostStatus.swift; sourceTree = "<group>"; };
 		05AD24672140B020007F408B /* BytePushPostStatusQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPostStatusQuery.swift; sourceTree = "<group>"; };
+		05AD24692140B2C6007F408B /* BytePushSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				0552FDF02136644100A61CC5 /* BytePushMedia.swift */,
 				05AD24632140AC16007F408B /* BytePushPostRevision.swift */,
 				05AD24652140AE6F007F408B /* BytePushPostStatus.swift */,
+				05AD24692140B2C6007F408B /* BytePushSettings.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				05AD24662140AE6F007F408B /* BytePushPostStatus.swift in Sources */,
 				05A84C5F213B6F0800A20C94 /* BytePushPageQuery.swift in Sources */,
 				0552FDF12136644100A61CC5 /* BytePushMedia.swift in Sources */,
+				05AD246A2140B2C6007F408B /* BytePushSettings.swift in Sources */,
 				0552FDE921365CF200A61CC5 /* BytePushTag.swift in Sources */,
 				0552FDF3213666FA00A61CC5 /* BytePushCommonDataTypes.swift in Sources */,
 				05005A58213625C500B1BB1B /* BytePushUser.swift in Sources */,
