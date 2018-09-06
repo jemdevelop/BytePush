@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BytePushPostStatus: Codable {
+public struct BytePushPostStatus: Codable {
     /// The title for the status.
     public let name: String?
     /// Whether posts with this status should be private.
