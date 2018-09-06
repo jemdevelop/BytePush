@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct BytePushPostStatusQuery {
+public struct BytePushPostStatusQuery: WordPressQuery {
     public var wpEndpointURL: URL
     /// Scope under which the request is made; determines fields present in response.
     public var context: Context?
