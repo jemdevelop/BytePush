@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct BytePushPostRevision {
+public struct BytePushPostRevision: Codable {
     /// The ID for the author of the object.
     public let author: Int?
     /// The date the object was published, in the site's timezone.
