@@ -117,6 +117,7 @@
 		05005A3B2136188D00B1BB1B /* BytePush */ = {
 			isa = PBXGroup;
 			children = (
+				0548F6EC214219EF00DF0ABC /* RetrieveTypes */,
 				05A84C51213B470100A20C94 /* QueryTypes */,
 				0552FDF421366D2D00A61CC5 /* DataTypes */,
 				05005A3C2136188D00B1BB1B /* BytePush.h */,
@@ -134,6 +135,13 @@
 				05005A492136188E00B1BB1B /* Info.plist */,
 			);
 			path = BytePushTests;
+			sourceTree = "<group>";
+		};
+		0548F6EC214219EF00DF0ABC /* RetrieveTypes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RetrieveTypes;
 			sourceTree = "<group>";
 		};
 		0552FDF421366D2D00A61CC5 /* DataTypes */ = {
