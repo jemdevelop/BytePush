@@ -13,6 +13,9 @@ public struct BytePushPostRetrieve: WordPressRetrieve {
     public let wpEndpointURL: URL
     /// Unique identifier for the object.
     public let id: Int
+    public var idString: String {
+        return String(id)
+    }
     /// Scope under which the request is made; determines fields present in response.
     public var context: Context?
     /// The password for the post if it is password protected.
