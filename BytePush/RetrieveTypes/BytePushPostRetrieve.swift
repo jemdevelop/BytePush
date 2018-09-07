@@ -10,7 +10,7 @@ import Foundation
 
 public struct BytePushPostRetrieve: WordPressRetrieve {
     /// The blog URL with complete path to the appropriate endpoint.
-    public var wpEndpointURL: URL
+    public let wpEndpointURL: URL
     /// Unique identifier for the object.
     public var id: Int
     /// Scope under which the request is made; determines fields present in response.
