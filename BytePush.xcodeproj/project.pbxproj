@@ -41,7 +41,6 @@
 		05AD24662140AE6F007F408B /* BytePushPostStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD24652140AE6F007F408B /* BytePushPostStatus.swift */; };
 		05AD24682140B020007F408B /* BytePushPostStatusQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD24672140B020007F408B /* BytePushPostStatusQuery.swift */; };
 		05AD246A2140B2C6007F408B /* BytePushSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD24692140B2C6007F408B /* BytePushSettings.swift */; };
-		05AD246C2140B6F6007F408B /* BytePushSettingsQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD246B2140B6F6007F408B /* BytePushSettingsQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +91,6 @@
 		05AD24652140AE6F007F408B /* BytePushPostStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPostStatus.swift; sourceTree = "<group>"; };
 		05AD24672140B020007F408B /* BytePushPostStatusQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushPostStatusQuery.swift; sourceTree = "<group>"; };
 		05AD24692140B2C6007F408B /* BytePushSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushSettings.swift; sourceTree = "<group>"; };
-		05AD246B2140B6F6007F408B /* BytePushSettingsQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePushSettingsQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +199,6 @@
 				05A84C5C213B6B7600A20C94 /* BytePushTagQuery.swift */,
 				05A84C5E213B6F0800A20C94 /* BytePushPageQuery.swift */,
 				05AD24672140B020007F408B /* BytePushPostStatusQuery.swift */,
-				05AD246B2140B6F6007F408B /* BytePushSettingsQuery.swift */,
 			);
 			path = QueryTypes;
 			sourceTree = "<group>";
@@ -327,7 +324,6 @@
 				05A84C5F213B6F0800A20C94 /* BytePushPageQuery.swift in Sources */,
 				0552FDF12136644100A61CC5 /* BytePushMedia.swift in Sources */,
 				05AD246A2140B2C6007F408B /* BytePushSettings.swift in Sources */,
-				05AD246C2140B6F6007F408B /* BytePushSettingsQuery.swift in Sources */,
 				0552FDE921365CF200A61CC5 /* BytePushTag.swift in Sources */,
 				051F97CA2143278A00CC19B6 /* BytePushUserRetrieve.swift in Sources */,
 				051F97BC2142BEF700CC19B6 /* WordPressOperation.swift in Sources */,
