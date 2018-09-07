@@ -26,10 +26,8 @@ public enum Order: String, Codable {
     case descending = "desc"
 }
 
-public protocol WordPressQuery: Encodable {
+public protocol WordPressQuery: WordPressOperation {
     associatedtype BytePushDataType
-    var wpEndpointURL: URL { get set }
-    init(withEndpointURL wpEndpointURL: URL)
     func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressQueryResult<BytePushDataType>) -> Void)
 }
 

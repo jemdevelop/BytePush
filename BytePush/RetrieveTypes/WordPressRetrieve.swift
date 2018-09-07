@@ -13,9 +13,7 @@ public enum WordPressRetrieveResult<BytePushDataType> {
     case failure(Error)
 }
 
-public protocol WordPressRetrieve: Encodable {
+public protocol WordPressRetrieve: WordPressOperation {
     associatedtype BytePushDataType
-    var wpEndpointURL: URL { get set }
-    init(withEndpointURL wpEndpointURL: URL)
     func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressRetrieveResult<BytePushDataType>) -> Void)
 }
