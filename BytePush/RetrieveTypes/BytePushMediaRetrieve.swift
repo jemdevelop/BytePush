@@ -18,8 +18,6 @@ public struct BytePushMediaRetrieve: WordPressRetrieve {
     }
     /// Scope under which the request is made; determines fields present in response.
     public var context: Context?
-    /// The password for the post if it is password protected.
-    public var password: String?
     
     public init(withEndpointURL wpEndpointURL: URL, getID id: Int) {
         self.wpEndpointURL = wpEndpointURL
