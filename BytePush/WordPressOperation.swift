@@ -9,7 +9,8 @@
 import Foundation
 
 public protocol WordPressOperation: Encodable {
-    var wpEndpointURL: URL { get set }
+    var wpEndpointURL: URL { get }
+    var queryURL: URL? { get }
 }
 
 extension WordPressOperation {
