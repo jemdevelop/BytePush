@@ -11,8 +11,11 @@ import Foundation
 public struct BytePushPostRetrieve: WordPressRetrieve {
     /// The blog URL with complete path to the appropriate endpoint.
     public var wpEndpointURL: URL
+    /// Unique identifier for the object.
     public var id: Int
+    /// Scope under which the request is made; determines fields present in response.
     public var context: Context?
+    /// The password for the post if it is password protected.
     public var password: String?
     
     public init(withEndpointURL wpEndpointURL: URL, getID id: Int) {
