@@ -24,6 +24,10 @@ public struct BytePushCategoryRetrieve: WordPressRetrieve {
         self.id = id
     }
     
+    private enum CodingKeys: String, CodingKey {
+        case context
+    }
+    
     public func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressRetrieveResult<BytePushCategory>) -> Void) {
         
     }

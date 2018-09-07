@@ -26,6 +26,10 @@ public struct BytePushMediaRetrieve: WordPressRetrieve {
         self.id = id
     }
     
+    private enum CodingKeys: String, CodingKey {
+        case context, password
+    }
+    
     public func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressRetrieveResult<BytePushMedia>) -> Void) {
         
     }
