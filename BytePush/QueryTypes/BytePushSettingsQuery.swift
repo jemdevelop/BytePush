@@ -10,7 +10,7 @@ import Foundation
 
 public struct BytePushSettingsQuery: WordPressQuery {
     /// The blog URL with complete path to the appropriate endpoint.
-    public var wpEndpointURL: URL
+    public let wpEndpointURL: URL
     
     public init(withEndpointURL wpEndpointURL: URL) {
         self.wpEndpointURL = wpEndpointURL
