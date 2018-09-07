@@ -22,4 +22,6 @@ public struct BytePushSettingsRetrieve: WordPressRetrieve {
     public func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressRetrieveResult<BytePushSettings>) -> Void) {
         
     }
+    
+    public func encode(to encoder: Encoder) throws { }
 }
