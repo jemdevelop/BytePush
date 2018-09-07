@@ -18,9 +18,8 @@ public struct BytePushUserRetrieve: WordPressRetrieve {
     /// Scope under which the request is made; determines fields present in response.
     public var context: Context?
     
-    public init(withEndpointURL wpEndpointURL: URL, getID id: Int) {
+    public init(withEndpointURL wpEndpointURL: URL) {
         self.wpEndpointURL = wpEndpointURL
-        self.id = id
     }
     
     public func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressRetrieveResult<BytePushMedia>) -> Void) {
