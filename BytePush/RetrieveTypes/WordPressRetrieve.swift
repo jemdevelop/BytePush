@@ -16,5 +16,16 @@ public enum WordPressRetrieveResult<BytePushDataType> {
 public protocol WordPressRetrieve: WordPressOperation {
     associatedtype BytePushDataType
     init(withEndpointURL wpEndpointURL: URL, getID id: Int)
+    var id: Int { get }
     func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressRetrieveResult<BytePushDataType>) -> Void)
+}
+
+extension WordPressRetrieve {
+    /// The complete URL for the query.
+    public var queryURL: URL? {
+        var components = URLComponents(url: wpEndpointURL, resolvingAgainstBaseURL: false)
+        components?.path.append(String(id))
+        components?.queryItems = queryItems
+        return components?.url
+    }
 }
