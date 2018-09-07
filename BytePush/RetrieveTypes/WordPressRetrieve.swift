@@ -15,5 +15,6 @@ public enum WordPressRetrieveResult<BytePushDataType> {
 
 public protocol WordPressRetrieve: WordPressOperation {
     associatedtype BytePushDataType
+    init(withEndpointURL wpEndpointURL: URL, getID id: Int)
     func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressRetrieveResult<BytePushDataType>) -> Void)
 }

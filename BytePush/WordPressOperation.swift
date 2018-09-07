@@ -10,5 +10,4 @@ import Foundation
 
 public protocol WordPressOperation: Encodable {
     var wpEndpointURL: URL { get set }
-    init(withEndpointURL wpEndpointURL: URL)
 }

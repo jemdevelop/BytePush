@@ -28,6 +28,7 @@ public enum Order: String, Codable {
 
 public protocol WordPressQuery: WordPressOperation {
     associatedtype BytePushDataType
+    init(withEndpointURL wpEndpointURL: URL)
     func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressQueryResult<BytePushDataType>) -> Void)
 }
 
