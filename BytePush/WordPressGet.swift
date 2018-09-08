@@ -1,5 +1,5 @@
 //
-//  WordPressOperation.swift
+//  WordPressGet.swift
 //  BytePush
 //
 //  Created by Jonathan Monreal on 9/7/18.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public protocol WordPressOperation: Encodable {
+public protocol WordPressGet: Encodable {
     var wpEndpointURL: URL { get }
     var queryURL: URL? { get }
 }
 
-extension WordPressOperation {
+extension WordPressGet {
     /// An array of query items representing the query.
     var queryItems: [URLQueryItem]? {
         let encoder = JSONEncoder()

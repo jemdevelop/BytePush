@@ -13,7 +13,7 @@ public enum WordPressRetrieveResult<BytePushDataType> {
     case failure(Error)
 }
 
-public protocol WordPressRetrieve: WordPressOperation {
+public protocol WordPressRetrieve: WordPressGet {
     associatedtype BytePushDataType
     var idString: String { get }
     func execute(withAuthenticationItem item: URLQueryItem?, result: @escaping (WordPressRetrieveResult<BytePushDataType>) -> Void)
