@@ -10,7 +10,7 @@ import Foundation
 
 public protocol WordPressGet: Encodable {
     var wpEndpointURL: URL { get }
-    var queryURL: URL? { get }
+    var getURL: URL? { get }
 }
 
 extension WordPressGet {

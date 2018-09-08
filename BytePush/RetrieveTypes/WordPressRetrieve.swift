@@ -21,7 +21,7 @@ public protocol WordPressRetrieve: WordPressGet {
 
 extension WordPressRetrieve {
     /// The complete URL for the query.
-    public var queryURL: URL? {
+    public var getURL: URL? {
         var components = URLComponents(url: wpEndpointURL, resolvingAgainstBaseURL: false)
         components?.path.append(idString)
         components?.queryItems = queryItems
