@@ -30,4 +30,14 @@ public class BytePushCommentCreate {
         self.content = content
         self.post = post
     }
+    
+    private enum CodingKeys: String, CodingKey {
+        case author, content, date, parent, post, status
+        case authorEmail = "author_email"
+        case authorIP = "author_ip"
+        case authorName = "author_name"
+        case authorURL = "author_url"
+        case authorUserAgent = "author_user_agent"
+        case dateGMT = "date_gmt"
+    }
 }
