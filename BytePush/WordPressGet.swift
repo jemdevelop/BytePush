@@ -8,9 +8,7 @@
 
 import Foundation
 
-public protocol WordPressGet: Encodable {
-    var wpEndpointURL: URL { get }
-    var getURL: URL? { get }
+public protocol WordPressGet: WordPressRequest {
 }
 
 extension WordPressGet {
